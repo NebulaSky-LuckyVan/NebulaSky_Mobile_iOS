@@ -1,0 +1,1129 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0325D5B05463CF62A6711F5F /* Pods_NSMobileNetworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9C7AEAA7DB74F35322D655 /* Pods_NSMobileNetworkTests.framework */; };
+		086F47E4CF6BDDDA085C7F3C /* yw_1222.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB00AC0BA5EA922BE4756804 /* yw_1222.jpg */; };
+		0E3CC271CCB70AF25E8C952A /* meta.config in Resources */ = {isa = PBXBuildFile; fileRef = E3B5D7BD919A1BF183C6D1E7 /* meta.config */; };
+		2DD5044B9203987202687391 /* Pods_NSMobileNetwork_NSMobileNetworkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93DEE963DE5D6ED4BFE543B3 /* Pods_NSMobileNetwork_NSMobileNetworkUITests.framework */; };
+		4634DD5F41286B3E64788438 /* meta.config in Resources */ = {isa = PBXBuildFile; fileRef = 58D0FCF7F76F58280CDB9A4C /* meta.config */; };
+		929C3B05F6EE3854A51063A0 /* Pods_NSMobileNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259A499BF061C2DFA53C05EB /* Pods_NSMobileNetwork.framework */; };
+		94039C876E68470C48063B17 /* yw_1222.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3852D65041930AD00451A767 /* yw_1222.jpg */; };
+		AEEF3F22257489C8006516EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3F21257489C8006516EE /* AppDelegate.m */; };
+		AEEF3F25257489C8006516EE /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3F24257489C8006516EE /* SceneDelegate.m */; };
+		AEEF3F28257489C8006516EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3F27257489C8006516EE /* ViewController.m */; };
+		AEEF3F2B257489C8006516EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3F29257489C8006516EE /* Main.storyboard */; };
+		AEEF3F2D257489C9006516EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3F2C257489C9006516EE /* Assets.xcassets */; };
+		AEEF3F30257489C9006516EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3F2E257489C9006516EE /* LaunchScreen.storyboard */; };
+		AEEF3F33257489C9006516EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3F32257489C9006516EE /* main.m */; };
+		AEEF3F3D257489C9006516EE /* NSMobileNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3F3C257489C9006516EE /* NSMobileNetworkTests.m */; };
+		AEEF3F48257489C9006516EE /* NSMobileNetworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3F47257489C9006516EE /* NSMobileNetworkUITests.m */; };
+		AEEF3F8825748A21006516EE /* NSRpcUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3F6725748A21006516EE /* NSRpcUtils.m */; };
+		AEEF3F8925748A21006516EE /* NSRpcMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3F6825748A21006516EE /* NSRpcMethod.m */; };
+		AEEF3F8A25748A21006516EE /* NSRpcOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3F6925748A21006516EE /* NSRpcOperation.m */; };
+		AEEF3F8B25748A21006516EE /* NSRpcAsyncCaller.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3F6A25748A21006516EE /* NSRpcAsyncCaller.m */; };
+		AEEF3F8C25748A21006516EE /* NSRpcException.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3F6B25748A21006516EE /* NSRpcException.m */; };
+		AEEF3F8D25748A21006516EE /* NSRpcConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3F6C25748A21006516EE /* NSRpcConfig.m */; };
+		AEEF3F8E25748A21006516EE /* NSRpcClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3F6D25748A21006516EE /* NSRpcClient.m */; };
+		AEEF3F8F25748A21006516EE /* NSRpcContext.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3F6E25748A21006516EE /* NSRpcContext.m */; };
+		AEEF3F9025748A21006516EE /* NSRpcBaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3F7225748A21006516EE /* NSRpcBaseOperation.m */; };
+		AEEF3FBF25748B8E006516EE /* NSReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3FB125748B8E006516EE /* NSReachability.m */; };
+		AEEF3FC025748B8E006516EE /* NSDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3FB425748B8E006516EE /* NSDownloadManager.m */; };
+		AEEF3FC125748B8E006516EE /* NSURLCommonRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3FB625748B8E006516EE /* NSURLCommonRequestOperation.m */; };
+		AEEF3FC225748B8E006516EE /* NSNetReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3FBA25748B8E006516EE /* NSNetReachability.m */; };
+		AEEF3FC325748B8E006516EE /* NSURLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3FBC25748B8E006516EE /* NSURLRequestOperation.m */; };
+		AEEF3FC425748B8E006516EE /* NSWifiUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3FBD25748B8E006516EE /* NSWifiUtils.m */; };
+		AEEF3FC525748B8E006516EE /* NSDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3FBE25748B8E006516EE /* NSDownloadRequest.m */; };
+		AEEF3FD025748DFF006516EE /* NSBaseSocketIOOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3FCF25748DFF006516EE /* NSBaseSocketIOOperation.m */; };
+		AEEF3FDB2574928B006516EE /* NSURLRequestItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3FDA2574928B006516EE /* NSURLRequestItem.m */; };
+		AEEF3FEF25749300006516EE /* NSURLRequestBaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3FEE25749300006516EE /* NSURLRequestBaseOperation.m */; };
+		AEEF40002574A46A006516EE /* NSMobileNetworkDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3FFF2574A46A006516EE /* NSMobileNetworkDataParser.m */; };
+		AEEF401D2574C78D006516EE /* NSURLRequestBaseOperation+RACSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF401C2574C78D006516EE /* NSURLRequestBaseOperation+RACSignal.m */; };
+		AEEF40252574CF8B006516EE /* NSBaseRPCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF40242574CF8B006516EE /* NSBaseRPCRequest.m */; };
+		AEEF402E2574CFDD006516EE /* NSBaseRPCRequestItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF402D2574CFDD006516EE /* NSBaseRPCRequestItem.m */; };
+		AEEF405F2574D1DB006516EE /* NSRpcCommonInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF405E2574D1DB006516EE /* NSRpcCommonInterceptor.m */; };
+		AEEF415E2574D9C4006516EE /* NSRPCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF415D2574D9C4006516EE /* NSRPCRequest.m */; };
+		AEEF41642574DA3C006516EE /* NSRPCResultAnalysis.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF41632574DA3C006516EE /* NSRPCResultAnalysis.m */; };
+		AEEF416A2574DA87006516EE /* NSCheetahRPCInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF41692574DA87006516EE /* NSCheetahRPCInterceptor.m */; };
+		AEEF41702574DAB7006516EE /* NSCheetahRPCHeaderInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF416F2574DAB7006516EE /* NSCheetahRPCHeaderInfo.m */; };
+		AEEF41C52574DC37006516EE /* ServiceConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF41C42574DC37006516EE /* ServiceConstant.m */; };
+		AEEF41CB2574DCB0006516EE /* NSRPCRequest+RACSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF41CA2574DCB0006516EE /* NSRPCRequest+RACSignal.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AEEF3F39257489C9006516EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEEF3F15257489C8006516EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEEF3F1C257489C8006516EE;
+			remoteInfo = NSMobileNetwork;
+		};
+		AEEF3F44257489C9006516EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEEF3F15257489C8006516EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEEF3F1C257489C8006516EE;
+			remoteInfo = NSMobileNetwork;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1C2AFFA8A2DE8D078449717E /* Pods-NSMobileNetworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSMobileNetworkTests.release.xcconfig"; path = "Target Support Files/Pods-NSMobileNetworkTests/Pods-NSMobileNetworkTests.release.xcconfig"; sourceTree = "<group>"; };
+		259A499BF061C2DFA53C05EB /* Pods_NSMobileNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSMobileNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25FC87E19FE60EEAA928F848 /* Pods-NSMobileNetworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSMobileNetworkTests.debug.xcconfig"; path = "Target Support Files/Pods-NSMobileNetworkTests/Pods-NSMobileNetworkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		28DA689C4802FE5D3881EC4C /* Pods-NSMobileNetwork-NSMobileNetworkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSMobileNetwork-NSMobileNetworkUITests.debug.xcconfig"; path = "Target Support Files/Pods-NSMobileNetwork-NSMobileNetworkUITests/Pods-NSMobileNetwork-NSMobileNetworkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2A101E34803A9F5604ABD1BD /* NSMobileNetworkUITests-mPaaS-Headers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMobileNetworkUITests-mPaaS-Headers.h"; sourceTree = "<group>"; };
+		35E31B7595B56EDB0D37143A /* Pods-NSMobileNetwork-NSMobileNetworkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSMobileNetwork-NSMobileNetworkUITests.release.xcconfig"; path = "Target Support Files/Pods-NSMobileNetwork-NSMobileNetworkUITests/Pods-NSMobileNetwork-NSMobileNetworkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3852D65041930AD00451A767 /* yw_1222.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = yw_1222.jpg; sourceTree = "<group>"; };
+		4B9C7AEAA7DB74F35322D655 /* Pods_NSMobileNetworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSMobileNetworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58D0FCF7F76F58280CDB9A4C /* meta.config */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = meta.config; sourceTree = "<group>"; };
+		69C18B461A58C64D1E322C4E /* NSMobileNetworkUITests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMobileNetworkUITests-Prefix.pch"; path = "../../../NSMobileNetworkUITests/NSMobileNetworkUITests-Prefix.pch"; sourceTree = "<group>"; };
+		6C83B0D3DA092E2C5DEA0091 /* NSMobileNetwork-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMobileNetwork-Prefix.pch"; path = "../../../NSMobileNetwork/NSMobileNetwork-Prefix.pch"; sourceTree = "<group>"; };
+		727E105A1F78FF0112A759C4 /* Pods-NSMobileNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSMobileNetwork.debug.xcconfig"; path = "Target Support Files/Pods-NSMobileNetwork/Pods-NSMobileNetwork.debug.xcconfig"; sourceTree = "<group>"; };
+		93DEE963DE5D6ED4BFE543B3 /* Pods_NSMobileNetwork_NSMobileNetworkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSMobileNetwork_NSMobileNetworkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEEF3F1D257489C8006516EE /* NSMobileNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSMobileNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEEF3F20257489C8006516EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AEEF3F21257489C8006516EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AEEF3F23257489C8006516EE /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		AEEF3F24257489C8006516EE /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		AEEF3F26257489C8006516EE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AEEF3F27257489C8006516EE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AEEF3F2A257489C8006516EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AEEF3F2C257489C9006516EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AEEF3F2F257489C9006516EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AEEF3F31257489C9006516EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEEF3F32257489C9006516EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AEEF3F38257489C9006516EE /* NSMobileNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSMobileNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEEF3F3C257489C9006516EE /* NSMobileNetworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSMobileNetworkTests.m; sourceTree = "<group>"; };
+		AEEF3F3E257489C9006516EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEEF3F43257489C9006516EE /* NSMobileNetworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSMobileNetworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEEF3F47257489C9006516EE /* NSMobileNetworkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSMobileNetworkUITests.m; sourceTree = "<group>"; };
+		AEEF3F49257489C9006516EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEEF3F6525748A21006516EE /* NSRpcErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRpcErrorCode.h; sourceTree = "<group>"; };
+		AEEF3F6625748A21006516EE /* NSRpcBaseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRpcBaseOperation.h; sourceTree = "<group>"; };
+		AEEF3F6725748A21006516EE /* NSRpcUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRpcUtils.m; sourceTree = "<group>"; };
+		AEEF3F6825748A21006516EE /* NSRpcMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRpcMethod.m; sourceTree = "<group>"; };
+		AEEF3F6925748A21006516EE /* NSRpcOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRpcOperation.m; sourceTree = "<group>"; };
+		AEEF3F6A25748A21006516EE /* NSRpcAsyncCaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRpcAsyncCaller.m; sourceTree = "<group>"; };
+		AEEF3F6B25748A21006516EE /* NSRpcException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRpcException.m; sourceTree = "<group>"; };
+		AEEF3F6C25748A21006516EE /* NSRpcConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRpcConfig.m; sourceTree = "<group>"; };
+		AEEF3F6D25748A21006516EE /* NSRpcClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRpcClient.m; sourceTree = "<group>"; };
+		AEEF3F6E25748A21006516EE /* NSRpcContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRpcContext.m; sourceTree = "<group>"; };
+		AEEF3F6F25748A21006516EE /* NSRpcConfigScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRpcConfigScope.h; sourceTree = "<group>"; };
+		AEEF3F7025748A21006516EE /* NSRpcInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRpcInterceptor.h; sourceTree = "<group>"; };
+		AEEF3F7125748A21006516EE /* NSRpcMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRpcMethod.h; sourceTree = "<group>"; };
+		AEEF3F7225748A21006516EE /* NSRpcBaseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRpcBaseOperation.m; sourceTree = "<group>"; };
+		AEEF3F7325748A21006516EE /* NSRpcUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRpcUtils.h; sourceTree = "<group>"; };
+		AEEF3F7425748A21006516EE /* NSRpcConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRpcConfig.h; sourceTree = "<group>"; };
+		AEEF3F7525748A21006516EE /* NSRpcException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRpcException.h; sourceTree = "<group>"; };
+		AEEF3F7625748A21006516EE /* NSRpcAsyncCaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRpcAsyncCaller.h; sourceTree = "<group>"; };
+		AEEF3F7725748A21006516EE /* NSRpcOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRpcOperation.h; sourceTree = "<group>"; };
+		AEEF3F7825748A21006516EE /* NSRpcContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRpcContext.h; sourceTree = "<group>"; };
+		AEEF3F7925748A21006516EE /* NSRpcClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRpcClient.h; sourceTree = "<group>"; };
+		AEEF3FB125748B8E006516EE /* NSReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSReachability.m; sourceTree = "<group>"; };
+		AEEF3FB225748B8E006516EE /* NSURLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLRequestOperation.h; sourceTree = "<group>"; };
+		AEEF3FB325748B8E006516EE /* NSURLCommonRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLCommonRequestOperation.h; sourceTree = "<group>"; };
+		AEEF3FB425748B8E006516EE /* NSDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDownloadManager.m; sourceTree = "<group>"; };
+		AEEF3FB525748B8E006516EE /* NSDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDownloadManager.h; sourceTree = "<group>"; };
+		AEEF3FB625748B8E006516EE /* NSURLCommonRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLCommonRequestOperation.m; sourceTree = "<group>"; };
+		AEEF3FB725748B8E006516EE /* NSNetReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNetReachability.h; sourceTree = "<group>"; };
+		AEEF3FB825748B8E006516EE /* NSDownloadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDownloadRequest.h; sourceTree = "<group>"; };
+		AEEF3FB925748B8E006516EE /* NSReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSReachability.h; sourceTree = "<group>"; };
+		AEEF3FBA25748B8E006516EE /* NSNetReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNetReachability.m; sourceTree = "<group>"; };
+		AEEF3FBB25748B8E006516EE /* NSWifiUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSWifiUtils.h; sourceTree = "<group>"; };
+		AEEF3FBC25748B8E006516EE /* NSURLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLRequestOperation.m; sourceTree = "<group>"; };
+		AEEF3FBD25748B8E006516EE /* NSWifiUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSWifiUtils.m; sourceTree = "<group>"; };
+		AEEF3FBE25748B8E006516EE /* NSDownloadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDownloadRequest.m; sourceTree = "<group>"; };
+		AEEF3FCE25748DFF006516EE /* NSBaseSocketIOOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSBaseSocketIOOperation.h; sourceTree = "<group>"; };
+		AEEF3FCF25748DFF006516EE /* NSBaseSocketIOOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSBaseSocketIOOperation.m; sourceTree = "<group>"; };
+		AEEF3FD825749207006516EE /* NSURLRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSURLRequest.h; sourceTree = "<group>"; };
+		AEEF3FD92574928B006516EE /* NSURLRequestItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSURLRequestItem.h; sourceTree = "<group>"; };
+		AEEF3FDA2574928B006516EE /* NSURLRequestItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSURLRequestItem.m; sourceTree = "<group>"; };
+		AEEF3FED25749300006516EE /* NSURLRequestBaseOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSURLRequestBaseOperation.h; sourceTree = "<group>"; };
+		AEEF3FEE25749300006516EE /* NSURLRequestBaseOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSURLRequestBaseOperation.m; sourceTree = "<group>"; };
+		AEEF3FFE2574A46A006516EE /* NSMobileNetworkDataParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSMobileNetworkDataParser.h; sourceTree = "<group>"; };
+		AEEF3FFF2574A46A006516EE /* NSMobileNetworkDataParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSMobileNetworkDataParser.m; sourceTree = "<group>"; };
+		AEEF401B2574C78D006516EE /* NSURLRequestBaseOperation+RACSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLRequestBaseOperation+RACSignal.h"; sourceTree = "<group>"; };
+		AEEF401C2574C78D006516EE /* NSURLRequestBaseOperation+RACSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequestBaseOperation+RACSignal.m"; sourceTree = "<group>"; };
+		AEEF40232574CF8B006516EE /* NSBaseRPCRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSBaseRPCRequest.h; sourceTree = "<group>"; };
+		AEEF40242574CF8B006516EE /* NSBaseRPCRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSBaseRPCRequest.m; sourceTree = "<group>"; };
+		AEEF402C2574CFDD006516EE /* NSBaseRPCRequestItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSBaseRPCRequestItem.h; sourceTree = "<group>"; };
+		AEEF402D2574CFDD006516EE /* NSBaseRPCRequestItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSBaseRPCRequestItem.m; sourceTree = "<group>"; };
+		AEEF405D2574D1DB006516EE /* NSRpcCommonInterceptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSRpcCommonInterceptor.h; sourceTree = "<group>"; };
+		AEEF405E2574D1DB006516EE /* NSRpcCommonInterceptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSRpcCommonInterceptor.m; sourceTree = "<group>"; };
+		AEEF415C2574D9C4006516EE /* NSRPCRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSRPCRequest.h; sourceTree = "<group>"; };
+		AEEF415D2574D9C4006516EE /* NSRPCRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSRPCRequest.m; sourceTree = "<group>"; };
+		AEEF41622574DA3C006516EE /* NSRPCResultAnalysis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSRPCResultAnalysis.h; sourceTree = "<group>"; };
+		AEEF41632574DA3C006516EE /* NSRPCResultAnalysis.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSRPCResultAnalysis.m; sourceTree = "<group>"; };
+		AEEF41682574DA87006516EE /* NSCheetahRPCInterceptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSCheetahRPCInterceptor.h; sourceTree = "<group>"; };
+		AEEF41692574DA87006516EE /* NSCheetahRPCInterceptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSCheetahRPCInterceptor.m; sourceTree = "<group>"; };
+		AEEF416E2574DAB7006516EE /* NSCheetahRPCHeaderInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSCheetahRPCHeaderInfo.h; sourceTree = "<group>"; };
+		AEEF416F2574DAB7006516EE /* NSCheetahRPCHeaderInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSCheetahRPCHeaderInfo.m; sourceTree = "<group>"; };
+		AEEF41C32574DC37006516EE /* ServiceConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceConstant.h; sourceTree = "<group>"; };
+		AEEF41C42574DC37006516EE /* ServiceConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceConstant.m; sourceTree = "<group>"; };
+		AEEF41C92574DCB0006516EE /* NSRPCRequest+RACSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSRPCRequest+RACSignal.h"; sourceTree = "<group>"; };
+		AEEF41CA2574DCB0006516EE /* NSRPCRequest+RACSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSRPCRequest+RACSignal.m"; sourceTree = "<group>"; };
+		AEEF41E82574E179006516EE /* NSMobileNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSMobileNetwork.h; sourceTree = "<group>"; };
+		D37FFDF50C01CEE0671A8288 /* NSMobileNetwork-mPaaS-Headers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMobileNetwork-mPaaS-Headers.h"; sourceTree = "<group>"; };
+		E3B5D7BD919A1BF183C6D1E7 /* meta.config */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = meta.config; sourceTree = "<group>"; };
+		F1AD2B3AEF9F177177B744D3 /* Pods-NSMobileNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSMobileNetwork.release.xcconfig"; path = "Target Support Files/Pods-NSMobileNetwork/Pods-NSMobileNetwork.release.xcconfig"; sourceTree = "<group>"; };
+		FB00AC0BA5EA922BE4756804 /* yw_1222.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = yw_1222.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEEF3F1A257489C8006516EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				929C3B05F6EE3854A51063A0 /* Pods_NSMobileNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEEF3F35257489C9006516EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0325D5B05463CF62A6711F5F /* Pods_NSMobileNetworkTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEEF3F40257489C9006516EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DD5044B9203987202687391 /* Pods_NSMobileNetwork_NSMobileNetworkUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		205DB77BAAC560AE4B40BC43 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				3E48C866C9D1D22C2245AE64 /* NSMobileNetwork */,
+				26A83287CB50D1552B4C5AC5 /* NSMobileNetworkUITests */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		26A83287CB50D1552B4C5AC5 /* NSMobileNetworkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E3B5D7BD919A1BF183C6D1E7 /* meta.config */,
+				3852D65041930AD00451A767 /* yw_1222.jpg */,
+				2A101E34803A9F5604ABD1BD /* NSMobileNetworkUITests-mPaaS-Headers.h */,
+				69C18B461A58C64D1E322C4E /* NSMobileNetworkUITests-Prefix.pch */,
+			);
+			path = NSMobileNetworkUITests;
+			sourceTree = "<group>";
+		};
+		3E48C866C9D1D22C2245AE64 /* NSMobileNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				58D0FCF7F76F58280CDB9A4C /* meta.config */,
+				FB00AC0BA5EA922BE4756804 /* yw_1222.jpg */,
+				D37FFDF50C01CEE0671A8288 /* NSMobileNetwork-mPaaS-Headers.h */,
+				6C83B0D3DA092E2C5DEA0091 /* NSMobileNetwork-Prefix.pch */,
+			);
+			path = NSMobileNetwork;
+			sourceTree = "<group>";
+		};
+		4C8618E8B122F382FC732985 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				727E105A1F78FF0112A759C4 /* Pods-NSMobileNetwork.debug.xcconfig */,
+				F1AD2B3AEF9F177177B744D3 /* Pods-NSMobileNetwork.release.xcconfig */,
+				28DA689C4802FE5D3881EC4C /* Pods-NSMobileNetwork-NSMobileNetworkUITests.debug.xcconfig */,
+				35E31B7595B56EDB0D37143A /* Pods-NSMobileNetwork-NSMobileNetworkUITests.release.xcconfig */,
+				25FC87E19FE60EEAA928F848 /* Pods-NSMobileNetworkTests.debug.xcconfig */,
+				1C2AFFA8A2DE8D078449717E /* Pods-NSMobileNetworkTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AEEF3F14257489C8006516EE = {
+			isa = PBXGroup;
+			children = (
+				AEEF3F1F257489C8006516EE /* NSMobileNetwork */,
+				AEEF3F3B257489C9006516EE /* NSMobileNetworkTests */,
+				AEEF3F46257489C9006516EE /* NSMobileNetworkUITests */,
+				AEEF3F1E257489C8006516EE /* Products */,
+				4C8618E8B122F382FC732985 /* Pods */,
+				B014DD808548AA08CC75A5BF /* Frameworks */,
+				C2B7805428D9061C08866F28 /* MPaaS */,
+			);
+			sourceTree = "<group>";
+		};
+		AEEF3F1E257489C8006516EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF3F1D257489C8006516EE /* NSMobileNetwork.app */,
+				AEEF3F38257489C9006516EE /* NSMobileNetworkTests.xctest */,
+				AEEF3F43257489C9006516EE /* NSMobileNetworkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEEF3F1F257489C8006516EE /* NSMobileNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF3F20257489C8006516EE /* AppDelegate.h */,
+				AEEF3F21257489C8006516EE /* AppDelegate.m */,
+				AEEF3F23257489C8006516EE /* SceneDelegate.h */,
+				AEEF3F24257489C8006516EE /* SceneDelegate.m */,
+				AEEF3F6225748A21006516EE /* NSMobileNetwork */,
+				AEEF3F26257489C8006516EE /* ViewController.h */,
+				AEEF3F27257489C8006516EE /* ViewController.m */,
+				AEEF3F29257489C8006516EE /* Main.storyboard */,
+				AEEF3F2C257489C9006516EE /* Assets.xcassets */,
+				AEEF3F2E257489C9006516EE /* LaunchScreen.storyboard */,
+				AEEF3F31257489C9006516EE /* Info.plist */,
+				AEEF3F32257489C9006516EE /* main.m */,
+			);
+			path = NSMobileNetwork;
+			sourceTree = "<group>";
+		};
+		AEEF3F3B257489C9006516EE /* NSMobileNetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF3F3C257489C9006516EE /* NSMobileNetworkTests.m */,
+				AEEF3F3E257489C9006516EE /* Info.plist */,
+			);
+			path = NSMobileNetworkTests;
+			sourceTree = "<group>";
+		};
+		AEEF3F46257489C9006516EE /* NSMobileNetworkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF3F47257489C9006516EE /* NSMobileNetworkUITests.m */,
+				AEEF3F49257489C9006516EE /* Info.plist */,
+			);
+			path = NSMobileNetworkUITests;
+			sourceTree = "<group>";
+		};
+		AEEF3F6225748A21006516EE /* NSMobileNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF41E82574E179006516EE /* NSMobileNetwork.h */,
+				AEEF3FCA25748C69006516EE /* NSSocket */,
+				AEEF3FC925748BCE006516EE /* Other */,
+				AEEF3F6425748A21006516EE /* NSRpcUtils */,
+				AEEF3F7D25748A21006516EE /* NSURLNetwork */,
+			);
+			path = NSMobileNetwork;
+			sourceTree = "<group>";
+		};
+		AEEF3F6425748A21006516EE /* NSRpcUtils */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF40212574CB91006516EE /* NSRPCRequest */,
+				AEEF3FB925748B8E006516EE /* NSReachability.h */,
+				AEEF3FB125748B8E006516EE /* NSReachability.m */,
+				AEEF3F6525748A21006516EE /* NSRpcErrorCode.h */,
+				AEEF3F6625748A21006516EE /* NSRpcBaseOperation.h */,
+				AEEF3F6725748A21006516EE /* NSRpcUtils.m */,
+				AEEF3F6825748A21006516EE /* NSRpcMethod.m */,
+				AEEF3F6925748A21006516EE /* NSRpcOperation.m */,
+				AEEF3F6A25748A21006516EE /* NSRpcAsyncCaller.m */,
+				AEEF3F6B25748A21006516EE /* NSRpcException.m */,
+				AEEF3F6C25748A21006516EE /* NSRpcConfig.m */,
+				AEEF3F6D25748A21006516EE /* NSRpcClient.m */,
+				AEEF3F6E25748A21006516EE /* NSRpcContext.m */,
+				AEEF3F6F25748A21006516EE /* NSRpcConfigScope.h */,
+				AEEF3F7025748A21006516EE /* NSRpcInterceptor.h */,
+				AEEF3F7125748A21006516EE /* NSRpcMethod.h */,
+				AEEF3F7225748A21006516EE /* NSRpcBaseOperation.m */,
+				AEEF3F7325748A21006516EE /* NSRpcUtils.h */,
+				AEEF3F7425748A21006516EE /* NSRpcConfig.h */,
+				AEEF3F7525748A21006516EE /* NSRpcException.h */,
+				AEEF3F7625748A21006516EE /* NSRpcAsyncCaller.h */,
+				AEEF3F7725748A21006516EE /* NSRpcOperation.h */,
+				AEEF3F7825748A21006516EE /* NSRpcContext.h */,
+				AEEF3F7925748A21006516EE /* NSRpcClient.h */,
+			);
+			path = NSRpcUtils;
+			sourceTree = "<group>";
+		};
+		AEEF3F7D25748A21006516EE /* NSURLNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF3FD7257491ED006516EE /* NSURLRequest */,
+				AEEF3FB725748B8E006516EE /* NSNetReachability.h */,
+				AEEF3FBA25748B8E006516EE /* NSNetReachability.m */,
+				AEEF3FB325748B8E006516EE /* NSURLCommonRequestOperation.h */,
+				AEEF3FB625748B8E006516EE /* NSURLCommonRequestOperation.m */,
+				AEEF3FB225748B8E006516EE /* NSURLRequestOperation.h */,
+				AEEF3FBC25748B8E006516EE /* NSURLRequestOperation.m */,
+				AEEF401B2574C78D006516EE /* NSURLRequestBaseOperation+RACSignal.h */,
+				AEEF401C2574C78D006516EE /* NSURLRequestBaseOperation+RACSignal.m */,
+			);
+			path = NSURLNetwork;
+			sourceTree = "<group>";
+		};
+		AEEF3FC925748BCE006516EE /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF3FB525748B8E006516EE /* NSDownloadManager.h */,
+				AEEF3FB425748B8E006516EE /* NSDownloadManager.m */,
+				AEEF3FB825748B8E006516EE /* NSDownloadRequest.h */,
+				AEEF3FBE25748B8E006516EE /* NSDownloadRequest.m */,
+				AEEF3FBB25748B8E006516EE /* NSWifiUtils.h */,
+				AEEF3FBD25748B8E006516EE /* NSWifiUtils.m */,
+				AEEF3FFE2574A46A006516EE /* NSMobileNetworkDataParser.h */,
+				AEEF3FFF2574A46A006516EE /* NSMobileNetworkDataParser.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		AEEF3FCA25748C69006516EE /* NSSocket */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF3FCD25748D49006516EE /* NSWebSocket */,
+				AEEF3FCC25748D22006516EE /* NSCocoaAsyncSocket */,
+				AEEF3FCB25748D19006516EE /* NSSocketIO */,
+			);
+			path = NSSocket;
+			sourceTree = "<group>";
+		};
+		AEEF3FCB25748D19006516EE /* NSSocketIO */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF3FCE25748DFF006516EE /* NSBaseSocketIOOperation.h */,
+				AEEF3FCF25748DFF006516EE /* NSBaseSocketIOOperation.m */,
+			);
+			path = NSSocketIO;
+			sourceTree = "<group>";
+		};
+		AEEF3FCC25748D22006516EE /* NSCocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSCocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+		AEEF3FCD25748D49006516EE /* NSWebSocket */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSWebSocket;
+			sourceTree = "<group>";
+		};
+		AEEF3FD7257491ED006516EE /* NSURLRequest */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF3FD825749207006516EE /* NSURLRequest.h */,
+				AEEF3FD92574928B006516EE /* NSURLRequestItem.h */,
+				AEEF3FDA2574928B006516EE /* NSURLRequestItem.m */,
+				AEEF3FED25749300006516EE /* NSURLRequestBaseOperation.h */,
+				AEEF3FEE25749300006516EE /* NSURLRequestBaseOperation.m */,
+			);
+			path = NSURLRequest;
+			sourceTree = "<group>";
+		};
+		AEEF40212574CB91006516EE /* NSRPCRequest */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF40222574CF70006516EE /* BaseRPCRequest */,
+			);
+			path = NSRPCRequest;
+			sourceTree = "<group>";
+		};
+		AEEF40222574CF70006516EE /* BaseRPCRequest */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF41C22574DC37006516EE /* ServiceConstant */,
+				AEEF40232574CF8B006516EE /* NSBaseRPCRequest.h */,
+				AEEF40242574CF8B006516EE /* NSBaseRPCRequest.m */,
+				AEEF402C2574CFDD006516EE /* NSBaseRPCRequestItem.h */,
+				AEEF402D2574CFDD006516EE /* NSBaseRPCRequestItem.m */,
+				AEEF405D2574D1DB006516EE /* NSRpcCommonInterceptor.h */,
+				AEEF405E2574D1DB006516EE /* NSRpcCommonInterceptor.m */,
+				AEEF415C2574D9C4006516EE /* NSRPCRequest.h */,
+				AEEF415D2574D9C4006516EE /* NSRPCRequest.m */,
+				AEEF41622574DA3C006516EE /* NSRPCResultAnalysis.h */,
+				AEEF41632574DA3C006516EE /* NSRPCResultAnalysis.m */,
+				AEEF41682574DA87006516EE /* NSCheetahRPCInterceptor.h */,
+				AEEF41692574DA87006516EE /* NSCheetahRPCInterceptor.m */,
+				AEEF416E2574DAB7006516EE /* NSCheetahRPCHeaderInfo.h */,
+				AEEF416F2574DAB7006516EE /* NSCheetahRPCHeaderInfo.m */,
+				AEEF41C92574DCB0006516EE /* NSRPCRequest+RACSignal.h */,
+				AEEF41CA2574DCB0006516EE /* NSRPCRequest+RACSignal.m */,
+			);
+			path = BaseRPCRequest;
+			sourceTree = "<group>";
+		};
+		AEEF41C22574DC37006516EE /* ServiceConstant */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF41C32574DC37006516EE /* ServiceConstant.h */,
+				AEEF41C42574DC37006516EE /* ServiceConstant.m */,
+			);
+			path = ServiceConstant;
+			sourceTree = "<group>";
+		};
+		B014DD808548AA08CC75A5BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				259A499BF061C2DFA53C05EB /* Pods_NSMobileNetwork.framework */,
+				93DEE963DE5D6ED4BFE543B3 /* Pods_NSMobileNetwork_NSMobileNetworkUITests.framework */,
+				4B9C7AEAA7DB74F35322D655 /* Pods_NSMobileNetworkTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2B7805428D9061C08866F28 /* MPaaS */ = {
+			isa = PBXGroup;
+			children = (
+				205DB77BAAC560AE4B40BC43 /* Targets */,
+			);
+			path = MPaaS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AEEF3F1C257489C8006516EE /* NSMobileNetwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEEF3F4C257489C9006516EE /* Build configuration list for PBXNativeTarget "NSMobileNetwork" */;
+			buildPhases = (
+				8D126ABD08A86E71E2B57A78 /* [CP] Check Pods Manifest.lock */,
+				AEEF3F19257489C8006516EE /* Sources */,
+				AEEF3F1A257489C8006516EE /* Frameworks */,
+				AEEF3F1B257489C8006516EE /* Resources */,
+				1419DE8663C557027ED884F3 /* [CP] Embed Pods Frameworks */,
+				31CC710958BB4A349D4E91E2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSMobileNetwork;
+			productName = NSMobileNetwork;
+			productReference = AEEF3F1D257489C8006516EE /* NSMobileNetwork.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AEEF3F37257489C9006516EE /* NSMobileNetworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEEF3F4F257489C9006516EE /* Build configuration list for PBXNativeTarget "NSMobileNetworkTests" */;
+			buildPhases = (
+				954C24ED973DF49621094210 /* [CP] Check Pods Manifest.lock */,
+				AEEF3F34257489C9006516EE /* Sources */,
+				AEEF3F35257489C9006516EE /* Frameworks */,
+				AEEF3F36257489C9006516EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEEF3F3A257489C9006516EE /* PBXTargetDependency */,
+			);
+			name = NSMobileNetworkTests;
+			productName = NSMobileNetworkTests;
+			productReference = AEEF3F38257489C9006516EE /* NSMobileNetworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AEEF3F42257489C9006516EE /* NSMobileNetworkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEEF3F52257489C9006516EE /* Build configuration list for PBXNativeTarget "NSMobileNetworkUITests" */;
+			buildPhases = (
+				37A1F65036F422947D9C25E1 /* [CP] Check Pods Manifest.lock */,
+				AEEF3F3F257489C9006516EE /* Sources */,
+				AEEF3F40257489C9006516EE /* Frameworks */,
+				AEEF3F41257489C9006516EE /* Resources */,
+				2635748B14F96DDD261048BD /* [CP] Embed Pods Frameworks */,
+				22E4AC415347A67FF2138D5A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEEF3F45257489C9006516EE /* PBXTargetDependency */,
+			);
+			name = NSMobileNetworkUITests;
+			productName = NSMobileNetworkUITests;
+			productReference = AEEF3F43257489C9006516EE /* NSMobileNetworkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEEF3F15257489C8006516EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NS;
+				LastUpgradeCheck = 1220;
+				ORGANIZATIONNAME = NebulaSky;
+				TargetAttributes = {
+					AEEF3F1C257489C8006516EE = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					AEEF3F37257489C9006516EE = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = AEEF3F1C257489C8006516EE;
+					};
+					AEEF3F42257489C9006516EE = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = AEEF3F1C257489C8006516EE;
+					};
+				};
+			};
+			buildConfigurationList = AEEF3F18257489C8006516EE /* Build configuration list for PBXProject "NSMobileNetwork" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AEEF3F14257489C8006516EE;
+			productRefGroup = AEEF3F1E257489C8006516EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEEF3F1C257489C8006516EE /* NSMobileNetwork */,
+				AEEF3F37257489C9006516EE /* NSMobileNetworkTests */,
+				AEEF3F42257489C9006516EE /* NSMobileNetworkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEEF3F1B257489C8006516EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEEF3F30257489C9006516EE /* LaunchScreen.storyboard in Resources */,
+				AEEF3F2D257489C9006516EE /* Assets.xcassets in Resources */,
+				AEEF3F2B257489C8006516EE /* Main.storyboard in Resources */,
+				4634DD5F41286B3E64788438 /* meta.config in Resources */,
+				086F47E4CF6BDDDA085C7F3C /* yw_1222.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEEF3F36257489C9006516EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEEF3F41257489C9006516EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E3CC271CCB70AF25E8C952A /* meta.config in Resources */,
+				94039C876E68470C48063B17 /* yw_1222.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1419DE8663C557027ED884F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSMobileNetwork/Pods-NSMobileNetwork-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSMobileNetwork/Pods-NSMobileNetwork-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NSMobileNetwork/Pods-NSMobileNetwork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22E4AC415347A67FF2138D5A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSMobileNetwork-NSMobileNetworkUITests/Pods-NSMobileNetwork-NSMobileNetworkUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSMobileNetwork-NSMobileNetworkUITests/Pods-NSMobileNetwork-NSMobileNetworkUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NSMobileNetwork-NSMobileNetworkUITests/Pods-NSMobileNetwork-NSMobileNetworkUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2635748B14F96DDD261048BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSMobileNetwork-NSMobileNetworkUITests/Pods-NSMobileNetwork-NSMobileNetworkUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSMobileNetwork-NSMobileNetworkUITests/Pods-NSMobileNetwork-NSMobileNetworkUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NSMobileNetwork-NSMobileNetworkUITests/Pods-NSMobileNetwork-NSMobileNetworkUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31CC710958BB4A349D4E91E2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSMobileNetwork/Pods-NSMobileNetwork-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSMobileNetwork/Pods-NSMobileNetwork-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NSMobileNetwork/Pods-NSMobileNetwork-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37A1F65036F422947D9C25E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NSMobileNetwork-NSMobileNetworkUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D126ABD08A86E71E2B57A78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NSMobileNetwork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		954C24ED973DF49621094210 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NSMobileNetworkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEEF3F19257489C8006516EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEEF41702574DAB7006516EE /* NSCheetahRPCHeaderInfo.m in Sources */,
+				AEEF3F8F25748A21006516EE /* NSRpcContext.m in Sources */,
+				AEEF3FDB2574928B006516EE /* NSURLRequestItem.m in Sources */,
+				AEEF3F28257489C8006516EE /* ViewController.m in Sources */,
+				AEEF3F8C25748A21006516EE /* NSRpcException.m in Sources */,
+				AEEF3F8A25748A21006516EE /* NSRpcOperation.m in Sources */,
+				AEEF3F22257489C8006516EE /* AppDelegate.m in Sources */,
+				AEEF3FC025748B8E006516EE /* NSDownloadManager.m in Sources */,
+				AEEF41C52574DC37006516EE /* ServiceConstant.m in Sources */,
+				AEEF3FC225748B8E006516EE /* NSNetReachability.m in Sources */,
+				AEEF40002574A46A006516EE /* NSMobileNetworkDataParser.m in Sources */,
+				AEEF3FC425748B8E006516EE /* NSWifiUtils.m in Sources */,
+				AEEF3F33257489C9006516EE /* main.m in Sources */,
+				AEEF41CB2574DCB0006516EE /* NSRPCRequest+RACSignal.m in Sources */,
+				AEEF3FC325748B8E006516EE /* NSURLRequestOperation.m in Sources */,
+				AEEF3F8B25748A21006516EE /* NSRpcAsyncCaller.m in Sources */,
+				AEEF40252574CF8B006516EE /* NSBaseRPCRequest.m in Sources */,
+				AEEF3FEF25749300006516EE /* NSURLRequestBaseOperation.m in Sources */,
+				AEEF402E2574CFDD006516EE /* NSBaseRPCRequestItem.m in Sources */,
+				AEEF3FBF25748B8E006516EE /* NSReachability.m in Sources */,
+				AEEF415E2574D9C4006516EE /* NSRPCRequest.m in Sources */,
+				AEEF3F9025748A21006516EE /* NSRpcBaseOperation.m in Sources */,
+				AEEF3F8D25748A21006516EE /* NSRpcConfig.m in Sources */,
+				AEEF3FD025748DFF006516EE /* NSBaseSocketIOOperation.m in Sources */,
+				AEEF3F8825748A21006516EE /* NSRpcUtils.m in Sources */,
+				AEEF405F2574D1DB006516EE /* NSRpcCommonInterceptor.m in Sources */,
+				AEEF3F8E25748A21006516EE /* NSRpcClient.m in Sources */,
+				AEEF401D2574C78D006516EE /* NSURLRequestBaseOperation+RACSignal.m in Sources */,
+				AEEF3FC525748B8E006516EE /* NSDownloadRequest.m in Sources */,
+				AEEF416A2574DA87006516EE /* NSCheetahRPCInterceptor.m in Sources */,
+				AEEF3F25257489C8006516EE /* SceneDelegate.m in Sources */,
+				AEEF3F8925748A21006516EE /* NSRpcMethod.m in Sources */,
+				AEEF3FC125748B8E006516EE /* NSURLCommonRequestOperation.m in Sources */,
+				AEEF41642574DA3C006516EE /* NSRPCResultAnalysis.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEEF3F34257489C9006516EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEEF3F3D257489C9006516EE /* NSMobileNetworkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEEF3F3F257489C9006516EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEEF3F48257489C9006516EE /* NSMobileNetworkUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AEEF3F3A257489C9006516EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEEF3F1C257489C8006516EE /* NSMobileNetwork */;
+			targetProxy = AEEF3F39257489C9006516EE /* PBXContainerItemProxy */;
+		};
+		AEEF3F45257489C9006516EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEEF3F1C257489C8006516EE /* NSMobileNetwork */;
+			targetProxy = AEEF3F44257489C9006516EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AEEF3F29257489C8006516EE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEEF3F2A257489C8006516EE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AEEF3F2E257489C9006516EE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEEF3F2F257489C9006516EE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AEEF3F4A257489C9006516EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AEEF3F4B257489C9006516EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AEEF3F4D257489C9006516EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 727E105A1F78FF0112A759C4 /* Pods-NSMobileNetwork.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSMobileNetwork/NSMobileNetwork-Prefix.pch";
+				INFOPLIST_FILE = NSMobileNetwork/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gdrcu.ifcc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AEEF3F4E257489C9006516EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1AD2B3AEF9F177177B744D3 /* Pods-NSMobileNetwork.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSMobileNetwork/NSMobileNetwork-Prefix.pch";
+				INFOPLIST_FILE = NSMobileNetwork/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gdrcu.ifcc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AEEF3F50257489C9006516EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25FC87E19FE60EEAA928F848 /* Pods-NSMobileNetworkTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NSMobileNetworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NebulaSky.NSMobileNetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSMobileNetwork.app/NSMobileNetwork";
+			};
+			name = Debug;
+		};
+		AEEF3F51257489C9006516EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C2AFFA8A2DE8D078449717E /* Pods-NSMobileNetworkTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NSMobileNetworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NebulaSky.NSMobileNetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSMobileNetwork.app/NSMobileNetwork";
+			};
+			name = Release;
+		};
+		AEEF3F53257489C9006516EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28DA689C4802FE5D3881EC4C /* Pods-NSMobileNetwork-NSMobileNetworkUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSMobileNetworkUITests/NSMobileNetworkUITests-Prefix.pch";
+				INFOPLIST_FILE = NSMobileNetworkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gdrcu.ifcc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NSMobileNetwork;
+			};
+			name = Debug;
+		};
+		AEEF3F54257489C9006516EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35E31B7595B56EDB0D37143A /* Pods-NSMobileNetwork-NSMobileNetworkUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSMobileNetworkUITests/NSMobileNetworkUITests-Prefix.pch";
+				INFOPLIST_FILE = NSMobileNetworkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gdrcu.ifcc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NSMobileNetwork;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEEF3F18257489C8006516EE /* Build configuration list for PBXProject "NSMobileNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEEF3F4A257489C9006516EE /* Debug */,
+				AEEF3F4B257489C9006516EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEEF3F4C257489C9006516EE /* Build configuration list for PBXNativeTarget "NSMobileNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEEF3F4D257489C9006516EE /* Debug */,
+				AEEF3F4E257489C9006516EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEEF3F4F257489C9006516EE /* Build configuration list for PBXNativeTarget "NSMobileNetworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEEF3F50257489C9006516EE /* Debug */,
+				AEEF3F51257489C9006516EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEEF3F52257489C9006516EE /* Build configuration list for PBXNativeTarget "NSMobileNetworkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEEF3F53257489C9006516EE /* Debug */,
+				AEEF3F54257489C9006516EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEEF3F15257489C8006516EE /* Project object */;
+}

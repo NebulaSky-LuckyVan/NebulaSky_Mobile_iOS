@@ -1,0 +1,23 @@
+//
+//  DobulePlatformApplicationsPrefixHeader.pch
+//  DobulePlatformApplications
+//
+//  Created by VanZhang on 2020/11/19.
+//
+
+#ifndef DobulePlatformApplicationsPrefixHeader_pch
+#define DobulePlatformApplicationsPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+// MPAAS BEGIN
+// This part is maintained by MPaaS plugin automatically. Please don't modify.
+#ifdef __OBJC__
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "NSMobileFramework.h"
+
+#endif
+// MPAAS END
+#endif /* DobulePlatformApplicationsPrefixHeader_pch */

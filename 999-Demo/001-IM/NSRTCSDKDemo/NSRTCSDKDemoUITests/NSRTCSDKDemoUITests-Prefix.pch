@@ -1,0 +1,14 @@
+//
+//  NSRTCSDKDemoUITests-Prefix.pch
+//  NSRTCSDKDemoUITests
+//
+//  Created by vanzhang on 2020/12/03.
+
+// MPAAS HEADERS BEGIN
+// This part is maintained by MPaaS plugin automatically. 
+#ifdef __OBJC__
+
+#import "NSRTCSDKDemoUITests-mPaaS-Headers.h"
+
+#endif
+// MPAAS HEADERS END

@@ -1,0 +1,809 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		73769DCC1EC02B1A53FADA45 /* Pods_NSPushNotificationService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A02F423F5EA7996E2D841CC6 /* Pods_NSPushNotificationService.framework */; };
+		AE1795362575D1E200AF0D27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1795352575D1E200AF0D27 /* AppDelegate.m */; };
+		AE1795392575D1E200AF0D27 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1795382575D1E200AF0D27 /* SceneDelegate.m */; };
+		AE17953C2575D1E200AF0D27 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE17953B2575D1E200AF0D27 /* ViewController.m */; };
+		AE17953F2575D1E200AF0D27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE17953D2575D1E200AF0D27 /* Main.storyboard */; };
+		AE1795412575D1E300AF0D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE1795402575D1E300AF0D27 /* Assets.xcassets */; };
+		AE1795442575D1E300AF0D27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1795422575D1E300AF0D27 /* LaunchScreen.storyboard */; };
+		AE1795472575D1E300AF0D27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1795462575D1E300AF0D27 /* main.m */; };
+		AE1795512575D1E300AF0D27 /* NSPushNotificationServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1795502575D1E300AF0D27 /* NSPushNotificationServiceTests.m */; };
+		AE17955C2575D1E300AF0D27 /* NSPushNotificationServiceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE17955B2575D1E300AF0D27 /* NSPushNotificationServiceUITests.m */; };
+		AE17956F2575D6F900AF0D27 /* NSPushNotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = AE17956E2575D6F900AF0D27 /* NSPushNotificationService.m */; };
+		AE1796B52575E5AF00AF0D27 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1796B42575E5AF00AF0D27 /* SystemConfiguration.framework */; };
+		AE1796BB257619D800AF0D27 /* AppDelegate+NSPushNotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1796BA257619D800AF0D27 /* AppDelegate+NSPushNotificationService.m */; };
+		AE32C2657E5927F2A3269A51 /* Pods_NSPushNotificationService_NSPushNotificationServiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FD1B21FC02C210D14441D7 /* Pods_NSPushNotificationService_NSPushNotificationServiceUITests.framework */; };
+		FC46D949D9E410AFBC38C383 /* Pods_NSPushNotificationServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AED5BD7DFF749D19F639FB4 /* Pods_NSPushNotificationServiceTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE17954D2575D1E300AF0D27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE1795292575D1E200AF0D27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE1795302575D1E200AF0D27;
+			remoteInfo = NSPushNotificationService;
+		};
+		AE1795582575D1E300AF0D27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE1795292575D1E200AF0D27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE1795302575D1E200AF0D27;
+			remoteInfo = NSPushNotificationService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		212C83F7C7E43308C31A2E98 /* Pods-NSPushNotificationServiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSPushNotificationServiceTests.debug.xcconfig"; path = "Target Support Files/Pods-NSPushNotificationServiceTests/Pods-NSPushNotificationServiceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		24FD1B21FC02C210D14441D7 /* Pods_NSPushNotificationService_NSPushNotificationServiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSPushNotificationService_NSPushNotificationServiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		301B0DEB04246A077351B1EE /* Pods-NSPushNotificationServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSPushNotificationServiceTests.release.xcconfig"; path = "Target Support Files/Pods-NSPushNotificationServiceTests/Pods-NSPushNotificationServiceTests.release.xcconfig"; sourceTree = "<group>"; };
+		5AD7DE08A5FFD707F7647396 /* Pods-NSPushNotificationService-NSPushNotificationServiceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSPushNotificationService-NSPushNotificationServiceUITests.release.xcconfig"; path = "Target Support Files/Pods-NSPushNotificationService-NSPushNotificationServiceUITests/Pods-NSPushNotificationService-NSPushNotificationServiceUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6AED5BD7DFF749D19F639FB4 /* Pods_NSPushNotificationServiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSPushNotificationServiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80F09E22109675E97804E779 /* Pods-NSPushNotificationService-NSPushNotificationServiceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSPushNotificationService-NSPushNotificationServiceUITests.debug.xcconfig"; path = "Target Support Files/Pods-NSPushNotificationService-NSPushNotificationServiceUITests/Pods-NSPushNotificationService-NSPushNotificationServiceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A02F423F5EA7996E2D841CC6 /* Pods_NSPushNotificationService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSPushNotificationService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAFCFAD0D98E7BC0A82CDB3F /* Pods-NSPushNotificationService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSPushNotificationService.debug.xcconfig"; path = "Target Support Files/Pods-NSPushNotificationService/Pods-NSPushNotificationService.debug.xcconfig"; sourceTree = "<group>"; };
+		AE1795312575D1E200AF0D27 /* NSPushNotificationService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSPushNotificationService.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE1795342575D1E200AF0D27 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AE1795352575D1E200AF0D27 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AE1795372575D1E200AF0D27 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		AE1795382575D1E200AF0D27 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		AE17953A2575D1E200AF0D27 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AE17953B2575D1E200AF0D27 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AE17953E2575D1E200AF0D27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE1795402575D1E300AF0D27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE1795432575D1E300AF0D27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE1795452575D1E300AF0D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE1795462575D1E300AF0D27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AE17954C2575D1E300AF0D27 /* NSPushNotificationServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSPushNotificationServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE1795502575D1E300AF0D27 /* NSPushNotificationServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSPushNotificationServiceTests.m; sourceTree = "<group>"; };
+		AE1795522575D1E300AF0D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE1795572575D1E300AF0D27 /* NSPushNotificationServiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSPushNotificationServiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE17955B2575D1E300AF0D27 /* NSPushNotificationServiceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSPushNotificationServiceUITests.m; sourceTree = "<group>"; };
+		AE17955D2575D1E300AF0D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE17956D2575D6F900AF0D27 /* NSPushNotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSPushNotificationService.h; sourceTree = "<group>"; };
+		AE17956E2575D6F900AF0D27 /* NSPushNotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSPushNotificationService.m; sourceTree = "<group>"; };
+		AE1796B42575E5AF00AF0D27 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AE1796B9257619D800AF0D27 /* AppDelegate+NSPushNotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+NSPushNotificationService.h"; sourceTree = "<group>"; };
+		AE1796BA257619D800AF0D27 /* AppDelegate+NSPushNotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+NSPushNotificationService.m"; sourceTree = "<group>"; };
+		EF42F81346DD6388C4F2C946 /* Pods-NSPushNotificationService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSPushNotificationService.release.xcconfig"; path = "Target Support Files/Pods-NSPushNotificationService/Pods-NSPushNotificationService.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE17952E2575D1E200AF0D27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE1796B52575E5AF00AF0D27 /* SystemConfiguration.framework in Frameworks */,
+				73769DCC1EC02B1A53FADA45 /* Pods_NSPushNotificationService.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE1795492575D1E300AF0D27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC46D949D9E410AFBC38C383 /* Pods_NSPushNotificationServiceTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE1795542575D1E300AF0D27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE32C2657E5927F2A3269A51 /* Pods_NSPushNotificationService_NSPushNotificationServiceUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53752A48B68AC663E23FDC4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAFCFAD0D98E7BC0A82CDB3F /* Pods-NSPushNotificationService.debug.xcconfig */,
+				EF42F81346DD6388C4F2C946 /* Pods-NSPushNotificationService.release.xcconfig */,
+				80F09E22109675E97804E779 /* Pods-NSPushNotificationService-NSPushNotificationServiceUITests.debug.xcconfig */,
+				5AD7DE08A5FFD707F7647396 /* Pods-NSPushNotificationService-NSPushNotificationServiceUITests.release.xcconfig */,
+				212C83F7C7E43308C31A2E98 /* Pods-NSPushNotificationServiceTests.debug.xcconfig */,
+				301B0DEB04246A077351B1EE /* Pods-NSPushNotificationServiceTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7C2F1608B6BF11B4FEBE41D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE1796B42575E5AF00AF0D27 /* SystemConfiguration.framework */,
+				A02F423F5EA7996E2D841CC6 /* Pods_NSPushNotificationService.framework */,
+				24FD1B21FC02C210D14441D7 /* Pods_NSPushNotificationService_NSPushNotificationServiceUITests.framework */,
+				6AED5BD7DFF749D19F639FB4 /* Pods_NSPushNotificationServiceTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE1795282575D1E200AF0D27 = {
+			isa = PBXGroup;
+			children = (
+				AE1795332575D1E200AF0D27 /* NSPushNotificationService */,
+				AE17954F2575D1E300AF0D27 /* NSPushNotificationServiceTests */,
+				AE17955A2575D1E300AF0D27 /* NSPushNotificationServiceUITests */,
+				AE1795322575D1E200AF0D27 /* Products */,
+				53752A48B68AC663E23FDC4B /* Pods */,
+				7C2F1608B6BF11B4FEBE41D5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AE1795322575D1E200AF0D27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE1795312575D1E200AF0D27 /* NSPushNotificationService.app */,
+				AE17954C2575D1E300AF0D27 /* NSPushNotificationServiceTests.xctest */,
+				AE1795572575D1E300AF0D27 /* NSPushNotificationServiceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE1795332575D1E200AF0D27 /* NSPushNotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				AE1795342575D1E200AF0D27 /* AppDelegate.h */,
+				AE1795352575D1E200AF0D27 /* AppDelegate.m */,
+				AE1795372575D1E200AF0D27 /* SceneDelegate.h */,
+				AE1795382575D1E200AF0D27 /* SceneDelegate.m */,
+				AE17953A2575D1E200AF0D27 /* ViewController.h */,
+				AE17953B2575D1E200AF0D27 /* ViewController.m */,
+				AE17956C2575D24200AF0D27 /* NSPushNotificationService */,
+				AE17953D2575D1E200AF0D27 /* Main.storyboard */,
+				AE1795402575D1E300AF0D27 /* Assets.xcassets */,
+				AE1795422575D1E300AF0D27 /* LaunchScreen.storyboard */,
+				AE1795452575D1E300AF0D27 /* Info.plist */,
+				AE1795462575D1E300AF0D27 /* main.m */,
+			);
+			path = NSPushNotificationService;
+			sourceTree = "<group>";
+		};
+		AE17954F2575D1E300AF0D27 /* NSPushNotificationServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE1795502575D1E300AF0D27 /* NSPushNotificationServiceTests.m */,
+				AE1795522575D1E300AF0D27 /* Info.plist */,
+			);
+			path = NSPushNotificationServiceTests;
+			sourceTree = "<group>";
+		};
+		AE17955A2575D1E300AF0D27 /* NSPushNotificationServiceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AE17955B2575D1E300AF0D27 /* NSPushNotificationServiceUITests.m */,
+				AE17955D2575D1E300AF0D27 /* Info.plist */,
+			);
+			path = NSPushNotificationServiceUITests;
+			sourceTree = "<group>";
+		};
+		AE17956C2575D24200AF0D27 /* NSPushNotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				AE17956D2575D6F900AF0D27 /* NSPushNotificationService.h */,
+				AE17956E2575D6F900AF0D27 /* NSPushNotificationService.m */,
+				AE1796B9257619D800AF0D27 /* AppDelegate+NSPushNotificationService.h */,
+				AE1796BA257619D800AF0D27 /* AppDelegate+NSPushNotificationService.m */,
+			);
+			path = NSPushNotificationService;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE1795302575D1E200AF0D27 /* NSPushNotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE1795602575D1E300AF0D27 /* Build configuration list for PBXNativeTarget "NSPushNotificationService" */;
+			buildPhases = (
+				5AA10D48E687664417F921FC /* [CP] Check Pods Manifest.lock */,
+				AE17952D2575D1E200AF0D27 /* Sources */,
+				AE17952E2575D1E200AF0D27 /* Frameworks */,
+				AE17952F2575D1E200AF0D27 /* Resources */,
+				09998629303CFD04962A53DE /* [CP] Embed Pods Frameworks */,
+				C7B24FCCF2FDD264308F7B25 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSPushNotificationService;
+			productName = NSPushNotificationService;
+			productReference = AE1795312575D1E200AF0D27 /* NSPushNotificationService.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AE17954B2575D1E300AF0D27 /* NSPushNotificationServiceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE1795632575D1E300AF0D27 /* Build configuration list for PBXNativeTarget "NSPushNotificationServiceTests" */;
+			buildPhases = (
+				326E2B73FB2D609EFD065BFA /* [CP] Check Pods Manifest.lock */,
+				AE1795482575D1E300AF0D27 /* Sources */,
+				AE1795492575D1E300AF0D27 /* Frameworks */,
+				AE17954A2575D1E300AF0D27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE17954E2575D1E300AF0D27 /* PBXTargetDependency */,
+			);
+			name = NSPushNotificationServiceTests;
+			productName = NSPushNotificationServiceTests;
+			productReference = AE17954C2575D1E300AF0D27 /* NSPushNotificationServiceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AE1795562575D1E300AF0D27 /* NSPushNotificationServiceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE1795662575D1E300AF0D27 /* Build configuration list for PBXNativeTarget "NSPushNotificationServiceUITests" */;
+			buildPhases = (
+				2F8750B5A44C6BB376E0F2BB /* [CP] Check Pods Manifest.lock */,
+				AE1795532575D1E300AF0D27 /* Sources */,
+				AE1795542575D1E300AF0D27 /* Frameworks */,
+				AE1795552575D1E300AF0D27 /* Resources */,
+				B84984754A28F5954D42F26A /* [CP] Embed Pods Frameworks */,
+				789C2649BDFF14CDD9EE26B4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE1795592575D1E300AF0D27 /* PBXTargetDependency */,
+			);
+			name = NSPushNotificationServiceUITests;
+			productName = NSPushNotificationServiceUITests;
+			productReference = AE1795572575D1E300AF0D27 /* NSPushNotificationServiceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE1795292575D1E200AF0D27 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					AE1795302575D1E200AF0D27 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					AE17954B2575D1E300AF0D27 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = AE1795302575D1E200AF0D27;
+					};
+					AE1795562575D1E300AF0D27 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = AE1795302575D1E200AF0D27;
+					};
+				};
+			};
+			buildConfigurationList = AE17952C2575D1E200AF0D27 /* Build configuration list for PBXProject "NSPushNotificationService" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE1795282575D1E200AF0D27;
+			productRefGroup = AE1795322575D1E200AF0D27 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE1795302575D1E200AF0D27 /* NSPushNotificationService */,
+				AE17954B2575D1E300AF0D27 /* NSPushNotificationServiceTests */,
+				AE1795562575D1E300AF0D27 /* NSPushNotificationServiceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE17952F2575D1E200AF0D27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE1795442575D1E300AF0D27 /* LaunchScreen.storyboard in Resources */,
+				AE1795412575D1E300AF0D27 /* Assets.xcassets in Resources */,
+				AE17953F2575D1E200AF0D27 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE17954A2575D1E300AF0D27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE1795552575D1E300AF0D27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09998629303CFD04962A53DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSPushNotificationService/Pods-NSPushNotificationService-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSPushNotificationService/Pods-NSPushNotificationService-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NSPushNotificationService/Pods-NSPushNotificationService-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F8750B5A44C6BB376E0F2BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NSPushNotificationService-NSPushNotificationServiceUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		326E2B73FB2D609EFD065BFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NSPushNotificationServiceTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AA10D48E687664417F921FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NSPushNotificationService-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		789C2649BDFF14CDD9EE26B4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSPushNotificationService-NSPushNotificationServiceUITests/Pods-NSPushNotificationService-NSPushNotificationServiceUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSPushNotificationService-NSPushNotificationServiceUITests/Pods-NSPushNotificationService-NSPushNotificationServiceUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NSPushNotificationService-NSPushNotificationServiceUITests/Pods-NSPushNotificationService-NSPushNotificationServiceUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B84984754A28F5954D42F26A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSPushNotificationService-NSPushNotificationServiceUITests/Pods-NSPushNotificationService-NSPushNotificationServiceUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSPushNotificationService-NSPushNotificationServiceUITests/Pods-NSPushNotificationService-NSPushNotificationServiceUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NSPushNotificationService-NSPushNotificationServiceUITests/Pods-NSPushNotificationService-NSPushNotificationServiceUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7B24FCCF2FDD264308F7B25 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSPushNotificationService/Pods-NSPushNotificationService-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSPushNotificationService/Pods-NSPushNotificationService-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NSPushNotificationService/Pods-NSPushNotificationService-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE17952D2575D1E200AF0D27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE17953C2575D1E200AF0D27 /* ViewController.m in Sources */,
+				AE1795362575D1E200AF0D27 /* AppDelegate.m in Sources */,
+				AE1796BB257619D800AF0D27 /* AppDelegate+NSPushNotificationService.m in Sources */,
+				AE1795472575D1E300AF0D27 /* main.m in Sources */,
+				AE17956F2575D6F900AF0D27 /* NSPushNotificationService.m in Sources */,
+				AE1795392575D1E200AF0D27 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE1795482575D1E300AF0D27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE1795512575D1E300AF0D27 /* NSPushNotificationServiceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE1795532575D1E300AF0D27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE17955C2575D1E300AF0D27 /* NSPushNotificationServiceUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE17954E2575D1E300AF0D27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE1795302575D1E200AF0D27 /* NSPushNotificationService */;
+			targetProxy = AE17954D2575D1E300AF0D27 /* PBXContainerItemProxy */;
+		};
+		AE1795592575D1E300AF0D27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE1795302575D1E200AF0D27 /* NSPushNotificationService */;
+			targetProxy = AE1795582575D1E300AF0D27 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AE17953D2575D1E200AF0D27 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE17953E2575D1E200AF0D27 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE1795422575D1E300AF0D27 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE1795432575D1E300AF0D27 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE17955E2575D1E300AF0D27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AE17955F2575D1E300AF0D27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE1795612575D1E300AF0D27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAFCFAD0D98E7BC0A82CDB3F /* Pods-NSPushNotificationService.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 7GTPKLC48T;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = NSPushNotificationService/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gdrcu.ifcc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = ifccDevelopment_APPSTORE;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE1795622575D1E300AF0D27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF42F81346DD6388C4F2C946 /* Pods-NSPushNotificationService.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 7GTPKLC48T;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = NSPushNotificationService/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gdrcu.ifcc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = ifccDevelopment_APPSTORE;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AE1795642575D1E300AF0D27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 212C83F7C7E43308C31A2E98 /* Pods-NSPushNotificationServiceTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NSPushNotificationServiceTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NebulaSky.NSPushNotificationServiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSPushNotificationService.app/NSPushNotificationService";
+			};
+			name = Debug;
+		};
+		AE1795652575D1E300AF0D27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 301B0DEB04246A077351B1EE /* Pods-NSPushNotificationServiceTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NSPushNotificationServiceTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NebulaSky.NSPushNotificationServiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSPushNotificationService.app/NSPushNotificationService";
+			};
+			name = Release;
+		};
+		AE1795672575D1E300AF0D27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80F09E22109675E97804E779 /* Pods-NSPushNotificationService-NSPushNotificationServiceUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NSPushNotificationServiceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NebulaSky.NSPushNotificationServiceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NSPushNotificationService;
+			};
+			name = Debug;
+		};
+		AE1795682575D1E300AF0D27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AD7DE08A5FFD707F7647396 /* Pods-NSPushNotificationService-NSPushNotificationServiceUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NSPushNotificationServiceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NebulaSky.NSPushNotificationServiceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NSPushNotificationService;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE17952C2575D1E200AF0D27 /* Build configuration list for PBXProject "NSPushNotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE17955E2575D1E300AF0D27 /* Debug */,
+				AE17955F2575D1E300AF0D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE1795602575D1E300AF0D27 /* Build configuration list for PBXNativeTarget "NSPushNotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE1795612575D1E300AF0D27 /* Debug */,
+				AE1795622575D1E300AF0D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE1795632575D1E300AF0D27 /* Build configuration list for PBXNativeTarget "NSPushNotificationServiceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE1795642575D1E300AF0D27 /* Debug */,
+				AE1795652575D1E300AF0D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE1795662575D1E300AF0D27 /* Build configuration list for PBXNativeTarget "NSPushNotificationServiceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE1795672575D1E300AF0D27 /* Debug */,
+				AE1795682575D1E300AF0D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE1795292575D1E200AF0D27 /* Project object */;
+}

@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE7B235F2552349800B82E28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7B235E2552349800B82E28 /* AppDelegate.m */; };
+		AE7B23622552349800B82E28 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7B23612552349800B82E28 /* SceneDelegate.m */; };
+		AE7B23652552349800B82E28 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7B23642552349800B82E28 /* ViewController.m */; };
+		AE7B23682552349800B82E28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7B23662552349800B82E28 /* Main.storyboard */; };
+		AE7B236A2552349900B82E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE7B23692552349900B82E28 /* Assets.xcassets */; };
+		AE7B236D2552349A00B82E28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7B236B2552349900B82E28 /* LaunchScreen.storyboard */; };
+		AE7B23702552349A00B82E28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7B236F2552349A00B82E28 /* main.m */; };
+		AE7B237A2552349A00B82E28 /* _1_NebulaEncryptDecryptTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7B23792552349A00B82E28 /* _1_NebulaEncryptDecryptTests.m */; };
+		AE7B23852552349A00B82E28 /* _1_NebulaEncryptDecryptUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7B23842552349A00B82E28 /* _1_NebulaEncryptDecryptUITests.m */; };
+		AE7B23A4255234B800B82E28 /* NSData+DES.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7B239C255234B800B82E28 /* NSData+DES.m */; };
+		AE7B23A5255234B800B82E28 /* XHEncryptionKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7B239D255234B800B82E28 /* XHEncryptionKit.m */; };
+		AE7B23A6255234B800B82E28 /* NSString+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7B23A1255234B800B82E28 /* NSString+AES.m */; };
+		AE7B23A7255234B800B82E28 /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7B23A2255234B800B82E28 /* NSData+AES.m */; };
+		AE7B23AD255234D400B82E28 /* NSData+HASH_MD_Digest.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7B23AC255234D400B82E28 /* NSData+HASH_MD_Digest.m */; };
+		AE7B23C02552359E00B82E28 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7B23BF2552359E00B82E28 /* GTMBase64.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE7B23762552349A00B82E28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE7B23522552349800B82E28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE7B23592552349800B82E28;
+			remoteInfo = "01-NebulaEncryptDecrypt";
+		};
+		AE7B23812552349A00B82E28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE7B23522552349800B82E28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE7B23592552349800B82E28;
+			remoteInfo = "01-NebulaEncryptDecrypt";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AE7B235A2552349800B82E28 /* 01-NebulaEncryptDecrypt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-NebulaEncryptDecrypt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE7B235D2552349800B82E28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AE7B235E2552349800B82E28 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AE7B23602552349800B82E28 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		AE7B23612552349800B82E28 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		AE7B23632552349800B82E28 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AE7B23642552349800B82E28 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AE7B23672552349800B82E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE7B23692552349900B82E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE7B236C2552349A00B82E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE7B236E2552349A00B82E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE7B236F2552349A00B82E28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AE7B23752552349A00B82E28 /* 01-NebulaEncryptDecryptTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "01-NebulaEncryptDecryptTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE7B23792552349A00B82E28 /* _1_NebulaEncryptDecryptTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _1_NebulaEncryptDecryptTests.m; sourceTree = "<group>"; };
+		AE7B237B2552349A00B82E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE7B23802552349A00B82E28 /* 01-NebulaEncryptDecryptUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "01-NebulaEncryptDecryptUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE7B23842552349A00B82E28 /* _1_NebulaEncryptDecryptUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _1_NebulaEncryptDecryptUITests.m; sourceTree = "<group>"; };
+		AE7B23862552349A00B82E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE7B2399255234B800B82E28 /* XHEncryptionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHEncryptionKit.h; sourceTree = "<group>"; };
+		AE7B239B255234B800B82E28 /* NSData+DES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+DES.h"; sourceTree = "<group>"; };
+		AE7B239C255234B800B82E28 /* NSData+DES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+DES.m"; sourceTree = "<group>"; };
+		AE7B239D255234B800B82E28 /* XHEncryptionKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHEncryptionKit.m; sourceTree = "<group>"; };
+		AE7B239E255234B800B82E28 /* XHEncryptionDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHEncryptionDefine.h; sourceTree = "<group>"; };
+		AE7B23A0255234B800B82E28 /* NSData+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
+		AE7B23A1255234B800B82E28 /* NSString+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AES.m"; sourceTree = "<group>"; };
+		AE7B23A2255234B800B82E28 /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
+		AE7B23A3255234B800B82E28 /* NSString+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AES.h"; sourceTree = "<group>"; };
+		AE7B23AB255234D300B82E28 /* NSData+HASH_MD_Digest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+HASH_MD_Digest.h"; sourceTree = "<group>"; };
+		AE7B23AC255234D400B82E28 /* NSData+HASH_MD_Digest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+HASH_MD_Digest.m"; sourceTree = "<group>"; };
+		AE7B23BD2552359E00B82E28 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		AE7B23BE2552359E00B82E28 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		AE7B23BF2552359E00B82E28 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE7B23572552349800B82E28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE7B23722552349A00B82E28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE7B237D2552349A00B82E28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE7B23512552349800B82E28 = {
+			isa = PBXGroup;
+			children = (
+				AE7B235C2552349800B82E28 /* 01-NebulaEncryptDecrypt */,
+				AE7B23782552349A00B82E28 /* 01-NebulaEncryptDecryptTests */,
+				AE7B23832552349A00B82E28 /* 01-NebulaEncryptDecryptUITests */,
+				AE7B235B2552349800B82E28 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE7B235B2552349800B82E28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE7B235A2552349800B82E28 /* 01-NebulaEncryptDecrypt.app */,
+				AE7B23752552349A00B82E28 /* 01-NebulaEncryptDecryptTests.xctest */,
+				AE7B23802552349A00B82E28 /* 01-NebulaEncryptDecryptUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE7B235C2552349800B82E28 /* 01-NebulaEncryptDecrypt */ = {
+			isa = PBXGroup;
+			children = (
+				AE7B235D2552349800B82E28 /* AppDelegate.h */,
+				AE7B235E2552349800B82E28 /* AppDelegate.m */,
+				AE7B23602552349800B82E28 /* SceneDelegate.h */,
+				AE7B23612552349800B82E28 /* SceneDelegate.m */,
+				AE7B23632552349800B82E28 /* ViewController.h */,
+				AE7B23642552349800B82E28 /* ViewController.m */,
+				AE7B23BE2552359E00B82E28 /* GTMBase64.h */,
+				AE7B23BF2552359E00B82E28 /* GTMBase64.m */,
+				AE7B23BD2552359E00B82E28 /* GTMDefines.h */,
+				AE7B23AB255234D300B82E28 /* NSData+HASH_MD_Digest.h */,
+				AE7B23AC255234D400B82E28 /* NSData+HASH_MD_Digest.m */,
+				AE7B2398255234B800B82E28 /* XHEncryptionKit */,
+				AE7B23662552349800B82E28 /* Main.storyboard */,
+				AE7B23692552349900B82E28 /* Assets.xcassets */,
+				AE7B236B2552349900B82E28 /* LaunchScreen.storyboard */,
+				AE7B236E2552349A00B82E28 /* Info.plist */,
+				AE7B236F2552349A00B82E28 /* main.m */,
+			);
+			path = "01-NebulaEncryptDecrypt";
+			sourceTree = "<group>";
+		};
+		AE7B23782552349A00B82E28 /* 01-NebulaEncryptDecryptTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE7B23792552349A00B82E28 /* _1_NebulaEncryptDecryptTests.m */,
+				AE7B237B2552349A00B82E28 /* Info.plist */,
+			);
+			path = "01-NebulaEncryptDecryptTests";
+			sourceTree = "<group>";
+		};
+		AE7B23832552349A00B82E28 /* 01-NebulaEncryptDecryptUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AE7B23842552349A00B82E28 /* _1_NebulaEncryptDecryptUITests.m */,
+				AE7B23862552349A00B82E28 /* Info.plist */,
+			);
+			path = "01-NebulaEncryptDecryptUITests";
+			sourceTree = "<group>";
+		};
+		AE7B2398255234B800B82E28 /* XHEncryptionKit */ = {
+			isa = PBXGroup;
+			children = (
+				AE7B2399255234B800B82E28 /* XHEncryptionKit.h */,
+				AE7B239A255234B800B82E28 /* DES */,
+				AE7B239D255234B800B82E28 /* XHEncryptionKit.m */,
+				AE7B239E255234B800B82E28 /* XHEncryptionDefine.h */,
+				AE7B239F255234B800B82E28 /* AES */,
+			);
+			path = XHEncryptionKit;
+			sourceTree = "<group>";
+		};
+		AE7B239A255234B800B82E28 /* DES */ = {
+			isa = PBXGroup;
+			children = (
+				AE7B239B255234B800B82E28 /* NSData+DES.h */,
+				AE7B239C255234B800B82E28 /* NSData+DES.m */,
+			);
+			path = DES;
+			sourceTree = "<group>";
+		};
+		AE7B239F255234B800B82E28 /* AES */ = {
+			isa = PBXGroup;
+			children = (
+				AE7B23A0255234B800B82E28 /* NSData+AES.h */,
+				AE7B23A2255234B800B82E28 /* NSData+AES.m */,
+				AE7B23A1255234B800B82E28 /* NSString+AES.m */,
+				AE7B23A3255234B800B82E28 /* NSString+AES.h */,
+			);
+			path = AES;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE7B23592552349800B82E28 /* 01-NebulaEncryptDecrypt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE7B23892552349A00B82E28 /* Build configuration list for PBXNativeTarget "01-NebulaEncryptDecrypt" */;
+			buildPhases = (
+				AE7B23562552349800B82E28 /* Sources */,
+				AE7B23572552349800B82E28 /* Frameworks */,
+				AE7B23582552349800B82E28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "01-NebulaEncryptDecrypt";
+			productName = "01-NebulaEncryptDecrypt";
+			productReference = AE7B235A2552349800B82E28 /* 01-NebulaEncryptDecrypt.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AE7B23742552349A00B82E28 /* 01-NebulaEncryptDecryptTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE7B238C2552349A00B82E28 /* Build configuration list for PBXNativeTarget "01-NebulaEncryptDecryptTests" */;
+			buildPhases = (
+				AE7B23712552349A00B82E28 /* Sources */,
+				AE7B23722552349A00B82E28 /* Frameworks */,
+				AE7B23732552349A00B82E28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE7B23772552349A00B82E28 /* PBXTargetDependency */,
+			);
+			name = "01-NebulaEncryptDecryptTests";
+			productName = "01-NebulaEncryptDecryptTests";
+			productReference = AE7B23752552349A00B82E28 /* 01-NebulaEncryptDecryptTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AE7B237F2552349A00B82E28 /* 01-NebulaEncryptDecryptUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE7B238F2552349A00B82E28 /* Build configuration list for PBXNativeTarget "01-NebulaEncryptDecryptUITests" */;
+			buildPhases = (
+				AE7B237C2552349A00B82E28 /* Sources */,
+				AE7B237D2552349A00B82E28 /* Frameworks */,
+				AE7B237E2552349A00B82E28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE7B23822552349A00B82E28 /* PBXTargetDependency */,
+			);
+			name = "01-NebulaEncryptDecryptUITests";
+			productName = "01-NebulaEncryptDecryptUITests";
+			productReference = AE7B23802552349A00B82E28 /* 01-NebulaEncryptDecryptUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE7B23522552349800B82E28 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					AE7B23592552349800B82E28 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					AE7B23742552349A00B82E28 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = AE7B23592552349800B82E28;
+					};
+					AE7B237F2552349A00B82E28 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = AE7B23592552349800B82E28;
+					};
+				};
+			};
+			buildConfigurationList = AE7B23552552349800B82E28 /* Build configuration list for PBXProject "01-NebulaEncryptDecrypt" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE7B23512552349800B82E28;
+			productRefGroup = AE7B235B2552349800B82E28 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE7B23592552349800B82E28 /* 01-NebulaEncryptDecrypt */,
+				AE7B23742552349A00B82E28 /* 01-NebulaEncryptDecryptTests */,
+				AE7B237F2552349A00B82E28 /* 01-NebulaEncryptDecryptUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE7B23582552349800B82E28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE7B236D2552349A00B82E28 /* LaunchScreen.storyboard in Resources */,
+				AE7B236A2552349900B82E28 /* Assets.xcassets in Resources */,
+				AE7B23682552349800B82E28 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE7B23732552349A00B82E28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE7B237E2552349A00B82E28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE7B23562552349800B82E28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE7B23A4255234B800B82E28 /* NSData+DES.m in Sources */,
+				AE7B23A5255234B800B82E28 /* XHEncryptionKit.m in Sources */,
+				AE7B23652552349800B82E28 /* ViewController.m in Sources */,
+				AE7B235F2552349800B82E28 /* AppDelegate.m in Sources */,
+				AE7B23AD255234D400B82E28 /* NSData+HASH_MD_Digest.m in Sources */,
+				AE7B23702552349A00B82E28 /* main.m in Sources */,
+				AE7B23A6255234B800B82E28 /* NSString+AES.m in Sources */,
+				AE7B23C02552359E00B82E28 /* GTMBase64.m in Sources */,
+				AE7B23A7255234B800B82E28 /* NSData+AES.m in Sources */,
+				AE7B23622552349800B82E28 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE7B23712552349A00B82E28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE7B237A2552349A00B82E28 /* _1_NebulaEncryptDecryptTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE7B237C2552349A00B82E28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE7B23852552349A00B82E28 /* _1_NebulaEncryptDecryptUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE7B23772552349A00B82E28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE7B23592552349800B82E28 /* 01-NebulaEncryptDecrypt */;
+			targetProxy = AE7B23762552349A00B82E28 /* PBXContainerItemProxy */;
+		};
+		AE7B23822552349A00B82E28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE7B23592552349800B82E28 /* 01-NebulaEncryptDecrypt */;
+			targetProxy = AE7B23812552349A00B82E28 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AE7B23662552349800B82E28 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE7B23672552349800B82E28 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE7B236B2552349900B82E28 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE7B236C2552349A00B82E28 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE7B23872552349A00B82E28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AE7B23882552349A00B82E28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE7B238A2552349A00B82E28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "01-NebulaEncryptDecrypt/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NebulaSky.-1-NebulaEncryptDecrypt";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE7B238B2552349A00B82E28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "01-NebulaEncryptDecrypt/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NebulaSky.-1-NebulaEncryptDecrypt";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AE7B238D2552349A00B82E28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "01-NebulaEncryptDecryptTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NebulaSky.-1-NebulaEncryptDecryptTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/01-NebulaEncryptDecrypt.app/01-NebulaEncryptDecrypt";
+			};
+			name = Debug;
+		};
+		AE7B238E2552349A00B82E28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "01-NebulaEncryptDecryptTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NebulaSky.-1-NebulaEncryptDecryptTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/01-NebulaEncryptDecrypt.app/01-NebulaEncryptDecrypt";
+			};
+			name = Release;
+		};
+		AE7B23902552349A00B82E28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "01-NebulaEncryptDecryptUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NebulaSky.-1-NebulaEncryptDecryptUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "01-NebulaEncryptDecrypt";
+			};
+			name = Debug;
+		};
+		AE7B23912552349A00B82E28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "01-NebulaEncryptDecryptUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NebulaSky.-1-NebulaEncryptDecryptUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "01-NebulaEncryptDecrypt";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE7B23552552349800B82E28 /* Build configuration list for PBXProject "01-NebulaEncryptDecrypt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE7B23872552349A00B82E28 /* Debug */,
+				AE7B23882552349A00B82E28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE7B23892552349A00B82E28 /* Build configuration list for PBXNativeTarget "01-NebulaEncryptDecrypt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE7B238A2552349A00B82E28 /* Debug */,
+				AE7B238B2552349A00B82E28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE7B238C2552349A00B82E28 /* Build configuration list for PBXNativeTarget "01-NebulaEncryptDecryptTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE7B238D2552349A00B82E28 /* Debug */,
+				AE7B238E2552349A00B82E28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE7B238F2552349A00B82E28 /* Build configuration list for PBXNativeTarget "01-NebulaEncryptDecryptUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE7B23902552349A00B82E28 /* Debug */,
+				AE7B23912552349A00B82E28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE7B23522552349800B82E28 /* Project object */;
+}

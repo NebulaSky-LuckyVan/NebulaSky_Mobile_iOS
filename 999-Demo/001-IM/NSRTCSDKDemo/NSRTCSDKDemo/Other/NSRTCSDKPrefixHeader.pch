@@ -1,0 +1,47 @@
+//
+//  NSRTCSDKPrefixHeader.pch
+//  NSRTCSDKDemo
+//
+//  Created by VanZhang on 2020/12/2.
+//  Copyright © 2020 NebulaSky. All rights reserved.
+//
+
+#ifndef NSRTCSDKPrefixHeader_pch
+#define NSRTCSDKPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+#ifdef __cplusplus
+//#include <opencv2/opencv.hpp>
+//#include <opencv2/stitching/detail/blenders.hpp>
+//#include <opencv2/stitching/detail/exposure_compensate.hpp>
+#else
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <Availability.h>
+#endif
+
+#import "NSKits.h"
+#import "NSRTCSDK.h"
+#import "3rdLibs.h"
+#import "NSChatUI.h"
+#import "NSRTCURLRequestOperation.h"
+
+
+// 服务器地址
+
+#define BaseURL @"https://www.zrlyy.store:8080"
+// 登录接口
+#define  loginURL @"mobileLogin"
+// 注册接口
+#define registerURL @"register"
+// 在线的联系人
+#define onlineUserURL @"onLineUsers"
+// 所有的联系人
+#define allUserURL @"allUsers"
+// 上传图片
+#define sendImgMsgURL @"uploadFiles"
+ 
+#endif
+#endif /* NSRTCSDKPrefixHeader_pch */

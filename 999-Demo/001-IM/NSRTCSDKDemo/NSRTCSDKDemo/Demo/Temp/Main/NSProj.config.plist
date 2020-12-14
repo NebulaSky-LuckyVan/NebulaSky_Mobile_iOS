@@ -1,0 +1,39 @@
+{
+	ChildVcs = (
+		{
+			className = "NSMessagesViewController";
+			navTitle = "\U6d88\U606f";
+			tabTitle = "\U6d88\U606f";
+			"tabBarItemNormalImage" = "tab_xx";
+			tabBarItemSelImage = "tab_xx_pre";
+		},
+		{
+			className = "NSContanctsViewController";
+			navTitle = "\U901a\U8baf\U5f55";
+			tabTitle = "\U901a\U8baf\U5f55";
+			"tabBarItemNormalImage" = "tab_txl";
+			tabBarItemSelImage = "tab_txl_pre";
+		},
+		{
+			className = NSMineViewController;
+			navTitle = "";
+			tabTitle = "\U6211\U7684";
+			"tabBarItemNormalImage" = "tab_wd";
+			tabBarItemSelImage = "tab_wd_pre";
+		},
+	);
+	remotePush = {
+		configs = {
+			antMPassMobilePush = {};
+			jPush = {};
+			geTuiPush = {};
+			baiduPush = {};
+		};
+		platforms = {
+			antMPassMobilePush = YES;
+			jPush = NO;
+			geTuiPush = NO;
+			baiduPush = NO;
+		};
+	};
+}

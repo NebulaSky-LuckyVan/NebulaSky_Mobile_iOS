@@ -1,0 +1,119 @@
+
+
+#mPaas Pods 库
+plugin "cocoapods-mPaaS"
+source "https://code.aliyun.com/mpaas-public/podspecs.git"
+
+#cp_change_20839
+mPaaS_baseline '10.1.68'
+mPaaS_version_code 35   # This line is maintained by MPaaS plugin automatically. Please don't modify.
+# This line is maintained by MPaaS plugin automatically. Please don't modify.
+ 
+def common_mPaasPods
+  use_frameworks!
+  #H5容器
+  mPaaS_pod "mPaaS_Nebula"
+  #rpc
+  mPaaS_pod "mPaaS_RPC"
+  
+  mPaaS_pod "mPaaS_MobileFramework"
+  #消息推送
+  mPaaS_pod "mPaaS_Push"
+  #设备标识
+  mPaaS_pod "mPaaS_UTDID"
+  #数据存储
+  mPaaS_pod "mPaaS_DataCenter"
+  
+  #LBS
+  mPaaS_pod "mPaaS_LBS"
+  #移动分析、埋点等
+  mPaaS_pod "mPaaS_Log"
+  #OCR
+  mPaaS_pod "mPaaS_OCR"
+  #UI库
+  mPaaS_pod "mPaaS_CommonUI"
+  #热修复
+#  mPaaS_pod "mPaaS_Hotpatch"
+  #诊断
+  mPaaS_pod "mPaaS_Diagnosis"
+  #扫码：快速识别二维码、条形码
+  mPaaS_pod "mPaaS_ScanCode"
+  
+end
+
+source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+
+
+platform :ios, '9.0'
+
+# 这里调用的全部库
+def shared_pods
+  # Comment the next line if you don't want to use dynamic frameworks
+    use_frameworks!
+    
+    
+  #  pod 'Masonry'
+
+  #  pod 'FMDB'
+  # pod 'MJRefresh'
+  #  pod 'SDWebImage'  ,'4.0.0'
+
+  # pod 'FLAnimatedImage', '~> 1.0'
+    
+    #pod 'MBProgressHUD'
+   pod 'YYImage'
+   pod 'YYModel'
+  #  pod 'GPUImage'
+  #  pod 'AMapLocation'
+  #  pod 'AMap2DMap'
+  #  pod 'AMapSearch'
+  #  pod 'GoogleWebRTC'
+  # pod 'SVProgressHUD'
+  #  pod 'FSCalendar','~>2.8.0'##日历控件
+    #  Demo
+    pod 'ReactiveCocoa','~>2.5'
+#    pod 'IQKeyboardManager'
+  #  pod 'MJExtension'
+    # Pods for YNETBaseBank
+  # pod 'SGQRCode','~>3.0.1'
+  # pod 'SPAlertController','~>3.0.1'##alert弹框样式
+    
+    
+  #  pod 'CYLTabBarController','~> 1.28.3'##tabbar控件
+  #  pod 'SDAutoLayout','~> 2.2.1'##约束布局
+  ##  pod 'MJRefresh','~>3.2.0'##刷新控件
+  #  pod 'MJExtension','~>3.2.1'##模型JSON互转
+  #  pod 'SDCycleScrollView','~>1.80'##广告轮播框控件
+  ##  pod 'SDWebImage','~>5.2.3'##图片网络请求
+  #  pod 'LJContactManager'##通讯录
+  #  pod 'TYCyclePagerView','~>1.2.0'##广告轮播框控件
+  # pod 'WebViewJavascriptBridge','~>6.0.3'##webView调用原生
+  # pod 'TZImagePickerController'
+  # pod 'FSCalendar','~>2.8.0'##日历控件
+  #  pod 'TTGTagCollectionView','~>1.11.1'##特色View
+  #  pod 'IQKeyboardManager','~>6.5.0'##键盘约束
+  #  pod 'JJException','~>0.2.5'##防闪退
+  #  pod 'AFNetworking','~>3.2.1'##网络请求
+  #  pod 'TYSnapshotScroll'##scrollView截屏
+  #  pod 'SPAlertController','~>3.0.1'##alert弹框样式
+  #  pod 'SGQRCode','~>3.0.1' ##二维码生成和扫码
+  #  pod 'PINCache','~>2.3' ##缓存机制
+  #  pod 'CYLTabBarController','~>1.28.4'
+    
+    pod 'AFNetworking'
+#    ,'~>3.2.1'
+    pod 'Socket.IO-Client-Swift'
+
+end
+
+
+target 'DobuleMicroApplications' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  shared_pods
+  common_mPaasPods
+
+  # Pods for DobuleMicroApplications
+
+end

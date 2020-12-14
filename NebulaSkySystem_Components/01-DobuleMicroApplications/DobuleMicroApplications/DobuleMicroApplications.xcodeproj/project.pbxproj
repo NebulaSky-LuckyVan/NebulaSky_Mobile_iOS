@@ -1,0 +1,667 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0703C9362AE636325A121041 /* MPLauncherAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5E73D0CE6CF3BB5C5D7FA /* MPLauncherAppDelegate.m */; };
+		4AC1C95AA65692C011EF592A /* MPTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7583E38F4A21CEA1E34F31 /* MPTabBarViewController.m */; };
+		7E0C3AF4EBF0C3E5AAE94986 /* yw_1222.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA5DE5F375EB89F6A1DD0633 /* yw_1222.jpg */; };
+		8DEC558676BAB92C0F116837 /* meta.config in Resources */ = {isa = PBXBuildFile; fileRef = E828228552CB2591B6BB57CE /* meta.config */; };
+		8FC716F9A74EB5013BF7C53A /* Pods_DobuleMicroApplications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECDB8FDEB36C1332C3CD23C /* Pods_DobuleMicroApplications.framework */; };
+		ABC933ECD425569605BD03C2 /* MobileRuntime.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FF93234C98CE4BD417A50E8 /* MobileRuntime.plist */; };
+		AE145DFE25637A2C008D7C30 /* Images_mPaaS.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE145DF125637A2C008D7C30 /* Images_mPaaS.xcassets */; };
+		AE145DFF25637A2C008D7C30 /* MPH5WKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE145DF425637A2C008D7C30 /* MPH5WKWebView.m */; };
+		AE145E5A2563B17D008D7C30 /* DTFrameworkInterface+DobuleMicroApplications.m in Sources */ = {isa = PBXBuildFile; fileRef = AE145E592563B17D008D7C30 /* DTFrameworkInterface+DobuleMicroApplications.m */; };
+		AE145EB62563B309008D7C30 /* App1LauncherMicroAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE145EB52563B309008D7C30 /* App1LauncherMicroAppDelegate.m */; };
+		AE145EBC2563B31A008D7C30 /* App2LauncherMicroAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE145EBB2563B31A008D7C30 /* App2LauncherMicroAppDelegate.m */; };
+		E43E7C6E21D1077E00D9E31A /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43E7C6D21D1077E00D9E31A /* DemoViewController.m */; };
+		E43E7C7321D1077E00D9E31A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E43E7C7221D1077E00D9E31A /* Assets.xcassets */; };
+		E43E7C7621D1077E00D9E31A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E43E7C7421D1077E00D9E31A /* LaunchScreen.storyboard */; };
+		E43E7C7921D1077E00D9E31A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E43E7C7821D1077E00D9E31A /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		12F239681FFBA23506D0127A /* DobuleMicroApplications-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DobuleMicroApplications-Prefix.pch"; path = "../../../DobuleMicroApplications/DobuleMicroApplications-Prefix.pch"; sourceTree = "<group>"; };
+		3D7583E38F4A21CEA1E34F31 /* MPTabBarViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MPTabBarViewController.m; sourceTree = "<group>"; };
+		3FF93234C98CE4BD417A50E8 /* MobileRuntime.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = MobileRuntime.plist; sourceTree = "<group>"; };
+		4C42D5D801C5E60112F26E2D /* MPTabBarViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MPTabBarViewController.h; sourceTree = "<group>"; };
+		52E850F66F8C5344F3ECB366 /* Pods-DobuleMicroApplications.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DobuleMicroApplications.release.xcconfig"; path = "Target Support Files/Pods-DobuleMicroApplications/Pods-DobuleMicroApplications.release.xcconfig"; sourceTree = "<group>"; };
+		586526B63E9855AE47415734 /* Pods-DobuleMicroApplications.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DobuleMicroApplications.debug.xcconfig"; path = "Target Support Files/Pods-DobuleMicroApplications/Pods-DobuleMicroApplications.debug.xcconfig"; sourceTree = "<group>"; };
+		9AD5E73D0CE6CF3BB5C5D7FA /* MPLauncherAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MPLauncherAppDelegate.m; sourceTree = "<group>"; };
+		AE145DF125637A2C008D7C30 /* Images_mPaaS.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images_mPaaS.xcassets; sourceTree = "<group>"; };
+		AE145DF425637A2C008D7C30 /* MPH5WKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPH5WKWebView.m; sourceTree = "<group>"; };
+		AE145DFA25637A2C008D7C30 /* MPH5WKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPH5WKWebView.h; sourceTree = "<group>"; };
+		AE145E582563B17D008D7C30 /* DTFrameworkInterface+DobuleMicroApplications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DTFrameworkInterface+DobuleMicroApplications.h"; sourceTree = "<group>"; };
+		AE145E592563B17D008D7C30 /* DTFrameworkInterface+DobuleMicroApplications.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DTFrameworkInterface+DobuleMicroApplications.m"; sourceTree = "<group>"; };
+		AE145EB42563B309008D7C30 /* App1LauncherMicroAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App1LauncherMicroAppDelegate.h; sourceTree = "<group>"; };
+		AE145EB52563B309008D7C30 /* App1LauncherMicroAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = App1LauncherMicroAppDelegate.m; sourceTree = "<group>"; };
+		AE145EBA2563B31A008D7C30 /* App2LauncherMicroAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App2LauncherMicroAppDelegate.h; sourceTree = "<group>"; };
+		AE145EBB2563B31A008D7C30 /* App2LauncherMicroAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = App2LauncherMicroAppDelegate.m; sourceTree = "<group>"; };
+		BA5DE5F375EB89F6A1DD0633 /* yw_1222.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = yw_1222.jpg; sourceTree = "<group>"; };
+		BECDB8FDEB36C1332C3CD23C /* Pods_DobuleMicroApplications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DobuleMicroApplications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE173D902BA778F7A7E99B41 /* MPLauncherAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MPLauncherAppDelegate.h; sourceTree = "<group>"; };
+		E43E7C6621D1077E00D9E31A /* DobuleMicroApplications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DobuleMicroApplications.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E43E7C6C21D1077E00D9E31A /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		E43E7C6D21D1077E00D9E31A /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		E43E7C7221D1077E00D9E31A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E43E7C7521D1077E00D9E31A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E43E7C7721D1077E00D9E31A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E43E7C7821D1077E00D9E31A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E43E7C8221D1095B00D9E31A /* DobuleMicroApplications-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DobuleMicroApplications-Prefix.pch"; sourceTree = "<group>"; };
+		E43E7C8621D1446400D9E31A /* DobuleMicroApplications.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DobuleMicroApplications.entitlements; sourceTree = "<group>"; };
+		E828228552CB2591B6BB57CE /* meta.config */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = meta.config; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E43E7C6321D1077E00D9E31A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FC716F9A74EB5013BF7C53A /* Pods_DobuleMicroApplications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2023666BD57078AE5DEA4CBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BECDB8FDEB36C1332C3CD23C /* Pods_DobuleMicroApplications.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B856A2B46724163A9CAAE4D /* Launcher */ = {
+			isa = PBXGroup;
+			children = (
+				DE173D902BA778F7A7E99B41 /* MPLauncherAppDelegate.h */,
+				9AD5E73D0CE6CF3BB5C5D7FA /* MPLauncherAppDelegate.m */,
+				4C42D5D801C5E60112F26E2D /* MPTabBarViewController.h */,
+				3D7583E38F4A21CEA1E34F31 /* MPTabBarViewController.m */,
+				AE145E582563B17D008D7C30 /* DTFrameworkInterface+DobuleMicroApplications.h */,
+				AE145E592563B17D008D7C30 /* DTFrameworkInterface+DobuleMicroApplications.m */,
+				3FF93234C98CE4BD417A50E8 /* MobileRuntime.plist */,
+			);
+			path = Launcher;
+			sourceTree = "<group>";
+		};
+		6710397BF110CABC6E8C314F /* MPaaS */ = {
+			isa = PBXGroup;
+			children = (
+				9849D5F10F1F92F17A7B53CD /* Targets */,
+			);
+			path = MPaaS;
+			sourceTree = "<group>";
+		};
+		9849D5F10F1F92F17A7B53CD /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				BA4FEDBB05BB15336CEE3D41 /* DobuleMicroApplications */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		AE145DF025637A2C008D7C30 /* APMobileFramework */ = {
+			isa = PBXGroup;
+			children = (
+				AE145E5D2563B18A008D7C30 /* mPaas */,
+				AE145DF125637A2C008D7C30 /* Images_mPaaS.xcassets */,
+				E43E7C6C21D1077E00D9E31A /* DemoViewController.h */,
+				E43E7C6D21D1077E00D9E31A /* DemoViewController.m */,
+				3B856A2B46724163A9CAAE4D /* Launcher */,
+				AE145DFA25637A2C008D7C30 /* MPH5WKWebView.h */,
+				AE145DF425637A2C008D7C30 /* MPH5WKWebView.m */,
+			);
+			path = APMobileFramework;
+			sourceTree = "<group>";
+		};
+		AE145E5D2563B18A008D7C30 /* mPaas */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mPaas;
+			sourceTree = "<group>";
+		};
+		AE145EB22563B2BB008D7C30 /* App1 */ = {
+			isa = PBXGroup;
+			children = (
+				AE145EB42563B309008D7C30 /* App1LauncherMicroAppDelegate.h */,
+				AE145EB52563B309008D7C30 /* App1LauncherMicroAppDelegate.m */,
+			);
+			path = App1;
+			sourceTree = "<group>";
+		};
+		AE145EB32563B2C3008D7C30 /* App2 */ = {
+			isa = PBXGroup;
+			children = (
+				AE145EBA2563B31A008D7C30 /* App2LauncherMicroAppDelegate.h */,
+				AE145EBB2563B31A008D7C30 /* App2LauncherMicroAppDelegate.m */,
+			);
+			path = App2;
+			sourceTree = "<group>";
+		};
+		BA40F152FBF8D0C28B95AB8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				586526B63E9855AE47415734 /* Pods-DobuleMicroApplications.debug.xcconfig */,
+				52E850F66F8C5344F3ECB366 /* Pods-DobuleMicroApplications.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BA4FEDBB05BB15336CEE3D41 /* DobuleMicroApplications */ = {
+			isa = PBXGroup;
+			children = (
+				AE145DF025637A2C008D7C30 /* APMobileFramework */,
+				E828228552CB2591B6BB57CE /* meta.config */,
+				BA5DE5F375EB89F6A1DD0633 /* yw_1222.jpg */,
+				12F239681FFBA23506D0127A /* DobuleMicroApplications-Prefix.pch */,
+			);
+			path = DobuleMicroApplications;
+			sourceTree = "<group>";
+		};
+		E43E7C5D21D1077E00D9E31A = {
+			isa = PBXGroup;
+			children = (
+				E43E7C6821D1077E00D9E31A /* DobuleMicroApplications */,
+				E43E7C6721D1077E00D9E31A /* Products */,
+				6710397BF110CABC6E8C314F /* MPaaS */,
+				2023666BD57078AE5DEA4CBC /* Frameworks */,
+				BA40F152FBF8D0C28B95AB8D /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		E43E7C6721D1077E00D9E31A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E43E7C6621D1077E00D9E31A /* DobuleMicroApplications.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E43E7C6821D1077E00D9E31A /* DobuleMicroApplications */ = {
+			isa = PBXGroup;
+			children = (
+				E43E7C8621D1446400D9E31A /* DobuleMicroApplications.entitlements */,
+				E43E7C7F21D108B900D9E31A /* Sources */,
+				E43E7C8021D108C100D9E31A /* Resources */,
+				E43E7C8321D109ED00D9E31A /* Supporting Files */,
+			);
+			path = DobuleMicroApplications;
+			sourceTree = "<group>";
+		};
+		E43E7C7F21D108B900D9E31A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AE145EB32563B2C3008D7C30 /* App2 */,
+				AE145EB22563B2BB008D7C30 /* App1 */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		E43E7C8021D108C100D9E31A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E43E7C7221D1077E00D9E31A /* Assets.xcassets */,
+				E43E7C7421D1077E00D9E31A /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E43E7C8321D109ED00D9E31A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E43E7C7721D1077E00D9E31A /* Info.plist */,
+				E43E7C7821D1077E00D9E31A /* main.m */,
+				E43E7C8221D1095B00D9E31A /* DobuleMicroApplications-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E43E7C6521D1077E00D9E31A /* DobuleMicroApplications */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E43E7C7C21D1077E00D9E31A /* Build configuration list for PBXNativeTarget "DobuleMicroApplications" */;
+			buildPhases = (
+				4A4A6ED8C71B893D4972DA36 /* [CP] Check Pods Manifest.lock */,
+				E43E7C6221D1077E00D9E31A /* Sources */,
+				E43E7C6321D1077E00D9E31A /* Frameworks */,
+				E43E7C6421D1077E00D9E31A /* Resources */,
+				CBAE171AE09212FA9F7739BD /* [CP] Embed Pods Frameworks */,
+				B66B46BEFC8A068BC9703B2C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DobuleMicroApplications;
+			productName = DobuleMicroApplications;
+			productReference = E43E7C6621D1077E00D9E31A /* DobuleMicroApplications.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E43E7C5E21D1077E00D9E31A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Alibaba;
+				TargetAttributes = {
+					E43E7C6521D1077E00D9E31A = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = E43E7C6121D1077E00D9E31A /* Build configuration list for PBXProject "DobuleMicroApplications" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E43E7C5D21D1077E00D9E31A;
+			productRefGroup = E43E7C6721D1077E00D9E31A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E43E7C6521D1077E00D9E31A /* DobuleMicroApplications */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E43E7C6421D1077E00D9E31A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E43E7C7621D1077E00D9E31A /* LaunchScreen.storyboard in Resources */,
+				E43E7C7321D1077E00D9E31A /* Assets.xcassets in Resources */,
+				AE145DFE25637A2C008D7C30 /* Images_mPaaS.xcassets in Resources */,
+				ABC933ECD425569605BD03C2 /* MobileRuntime.plist in Resources */,
+				8DEC558676BAB92C0F116837 /* meta.config in Resources */,
+				7E0C3AF4EBF0C3E5AAE94986 /* yw_1222.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A4A6ED8C71B893D4972DA36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DobuleMicroApplications-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B66B46BEFC8A068BC9703B2C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DobuleMicroApplications/Pods-DobuleMicroApplications-resources.sh",
+				"${PODS_ROOT}/APMCDNImage/APMCDNImage.framework/APMCDNImage.bundle",
+				"${PODS_ROOT}/APMImageProcessing/APMImageProcessing.framework/APMImageProcessing.bundle",
+				"${PODS_ROOT}/APMUtils/APMUtils.framework/APMUtils.bundle",
+				"${PODS_ROOT}/APMobileFramework/APMobileFramework.framework/APMobileFramework.bundle",
+				"${PODS_ROOT}/APMobileNetwork/APMobileNetwork.framework/APMobileNetwork.bundle",
+				"${PODS_ROOT}/APMultimedia/APMultimedia.framework/APMultimedia.bundle",
+				"${PODS_ROOT}/APRemoteLogging/APRemoteLogging.framework/APRemoteLogging.bundle",
+				"${PODS_ROOT}/AntUI/AntUI.framework/APCommonUI.bundle",
+				"${PODS_ROOT}/MAMapKit/MAMapKit.framework/AMap.bundle",
+				"${PODS_ROOT}/MPNebulaAdapter/MPNebulaAdapter.framework/MPInternalPlugins.bundle",
+				"${PODS_ROOT}/MPNebulaAdapter/MPNebulaAdapter.framework/MPInternalPresetApps.bundle",
+				"${PODS_ROOT}/MPNebulaAdapter/MPNebulaAdapter.framework/MPNebulaAdapter.bundle",
+				"${PODS_ROOT}/MPOcr/MPOcr.framework/MPOcr.bundle",
+				"${PODS_ROOT}/MPOcrCarLicense/MPOcrCarLicense.framework/MPOcrCarLicense.bundle",
+				"${PODS_ROOT}/MPOcrDriverLicense/MPOcrDriverLicense.framework/MPOcrDriverLicense.bundle",
+				"${PODS_ROOT}/MPOcrDrivingLicense/MPOcrDrivingLicense.framework/MPOcrDrivingLicense.bundle",
+				"${PODS_ROOT}/MPOcrGasMeter/MPOcrGasMeter.framework/MPOcrGasMeter.bundle",
+				"${PODS_ROOT}/MPOcrPassPort/MPOcrPassPort.framework/MPOcrPassPort.bundle",
+				"${PODS_ROOT}/MPOcrVinCode/MPOcrVinCode.framework/MPOcrVinCode.bundle",
+				"${PODS_ROOT}/NebulaAppManager/NebulaAppManager.framework/NebulaAppManager.bundle",
+				"${PODS_ROOT}/NebulaBiz/NebulaBiz.framework/NebulaBiz.bundle",
+				"${PODS_ROOT}/NebulaBiz/NebulaBiz.framework/NebulaPoseidon.bundle",
+				"${PODS_ROOT}/NebulaConfig/NebulaConfig.framework/NebulaConfig.bundle",
+				"${PODS_ROOT}/NebulaKernel/NebulaKernel.framework/NebulaKernel.bundle",
+				"${PODS_ROOT}/NebulaLogging/NebulaLogging.framework/NebulaLogging.bundle",
+				"${PODS_ROOT}/NebulaSDK/NebulaSDK.framework/NebulaSDK.bundle",
+				"${PODS_ROOT}/NebulaTinyapp/NebulaTinyapp.framework/NebulaTinyapp.bundle",
+				"${PODS_ROOT}/TBScanSDK/TBScanSDK.framework/TBScanSDK.bundle",
+				"${PODS_ROOT}/TBScanSDK/TBDecodeSDK.framework/TBDecodeSDK.bundle",
+				"${PODS_ROOT}/Texel/Texel.framework/Texel.bundle",
+				"${PODS_ROOT}/TinyAppCommon/TinyAppCommon.framework/TinyAppCommon.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMCDNImage.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMImageProcessing.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMUtils.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMobileFramework.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMobileNetwork.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMultimedia.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APRemoteLogging.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APCommonUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPInternalPlugins.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPInternalPresetApps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPNebulaAdapter.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPOcr.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPOcrCarLicense.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPOcrDriverLicense.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPOcrDrivingLicense.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPOcrGasMeter.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPOcrPassPort.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPOcrVinCode.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaAppManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaBiz.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaPoseidon.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaConfig.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaKernel.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaLogging.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaTinyapp.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TBScanSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TBDecodeSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Texel.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TinyAppCommon.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DobuleMicroApplications/Pods-DobuleMicroApplications-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBAE171AE09212FA9F7739BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DobuleMicroApplications/Pods-DobuleMicroApplications-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DobuleMicroApplications/Pods-DobuleMicroApplications-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E43E7C6221D1077E00D9E31A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E43E7C6E21D1077E00D9E31A /* DemoViewController.m in Sources */,
+				AE145E5A2563B17D008D7C30 /* DTFrameworkInterface+DobuleMicroApplications.m in Sources */,
+				AE145DFF25637A2C008D7C30 /* MPH5WKWebView.m in Sources */,
+				E43E7C7921D1077E00D9E31A /* main.m in Sources */,
+				AE145EBC2563B31A008D7C30 /* App2LauncherMicroAppDelegate.m in Sources */,
+				0703C9362AE636325A121041 /* MPLauncherAppDelegate.m in Sources */,
+				4AC1C95AA65692C011EF592A /* MPTabBarViewController.m in Sources */,
+				AE145EB62563B309008D7C30 /* App1LauncherMicroAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E43E7C7421D1077E00D9E31A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E43E7C7521D1077E00D9E31A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E43E7C7A21D1077E00D9E31A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_DobuleMicroApplicationsS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E43E7C7B21D1077E00D9E31A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_DobuleMicroApplicationsS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E43E7C7D21D1077E00D9E31A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 586526B63E9855AE47415734 /* Pods-DobuleMicroApplications.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DobuleMicroApplications/DobuleMicroApplications.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$SRCROOT/DobuleMicroApplications/DobuleMicroApplications-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/DobuleMicroApplications/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lz",
+					"-lsqlite3",
+					"-lxml2",
+					"-lc++",
+					"-lbz2",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gdrcu.ifcc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WARNING_CFLAGS = "-Wno-objc-protocol-method-implementation";
+			};
+			name = Debug;
+		};
+		E43E7C7E21D1077E00D9E31A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52E850F66F8C5344F3ECB366 /* Pods-DobuleMicroApplications.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DobuleMicroApplications/DobuleMicroApplications.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$SRCROOT/DobuleMicroApplications/DobuleMicroApplications-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/DobuleMicroApplications/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lz",
+					"-lsqlite3",
+					"-lxml2",
+					"-lc++",
+					"-lbz2",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gdrcu.ifcc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WARNING_CFLAGS = "-Wno-objc-protocol-method-implementation";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E43E7C6121D1077E00D9E31A /* Build configuration list for PBXProject "DobuleMicroApplications" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E43E7C7A21D1077E00D9E31A /* Debug */,
+				E43E7C7B21D1077E00D9E31A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E43E7C7C21D1077E00D9E31A /* Build configuration list for PBXNativeTarget "DobuleMicroApplications" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E43E7C7D21D1077E00D9E31A /* Debug */,
+				E43E7C7E21D1077E00D9E31A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E43E7C5E21D1077E00D9E31A /* Project object */;
+}

@@ -1,0 +1,95 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+#mPaas Pods 库
+plugin "cocoapods-mPaaS"
+source "https://code.aliyun.com/mpaas-public/podspecs.git"
+
+#cp_change_20839
+mPaaS_baseline '10.1.68'
+mPaaS_version_code 11   # This line is maintained by MPaaS plugin automatically. Please don't modify.
+# This line is maintained by MPaaS plugin automatically. Please don't modify.
+
+def common_mPaasPods
+#  use_frameworks!
+#  #H5容器
+#  mPaaS_pod "mPaaS_Nebula"
+#  #rpc
+  mPaaS_pod "mPaaS_RPC"
+#
+  mPaaS_pod "mPaaS_MobileFramework"
+#  #消息推送
+  mPaaS_pod "mPaaS_Push"
+#  #设备标识
+  mPaaS_pod "mPaaS_UTDID"
+#  #数据存储
+  mPaaS_pod "mPaaS_DataCenter"
+#
+#  #LBS
+#  mPaaS_pod "mPaaS_LBS"
+#  #移动分析、埋点等
+#  mPaaS_pod "mPaaS_Log"
+#  #OCR
+#  mPaaS_pod "mPaaS_OCR"
+#  #UI库
+  mPaaS_pod "mPaaS_CommonUI"
+#  #热修复
+#  #  mPaaS_pod "mPaaS_Hotpatch"
+#  #诊断
+#  mPaaS_pod "mPaaS_Diagnosis"
+#  #扫码：快速识别二维码、条形码
+#  mPaaS_pod "mPaaS_ScanCode"
+#
+end
+
+source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+
+
+platform :ios, '9.0'
+
+# 这里调用的全部库
+def shared_pods
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  pod 'Socket.IO-Client-Swift'
+#  pod 'Masonry'
+  pod 'AFNetworking'
+  pod 'FMDB'
+  pod 'MJExtension'
+  pod 'MJRefresh'
+  pod 'SDWebImage','4.0.0'
+  
+#  pod 'MBProgressHUD'
+  pod 'YYModel'
+  pod 'GPUImage'
+  pod 'AMapLocation'
+  pod 'AMap2DMap'
+  pod 'AMapSearch'
+  pod 'GoogleWebRTC'
+  
+  #  Demo
+  pod 'ReactiveCocoa','~>2.5'
+  pod 'IQKeyboardManager'
+  
+  
+end
+ 
+target 'NSRTCSDKDemo' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  shared_pods
+  common_mPaasPods
+  # Pods for NSRTCSDKDemo
+
+  target 'NSRTCSDKDemoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'NSRTCSDKDemoUITests' do
+    # Pods for testing
+  end
+
+end

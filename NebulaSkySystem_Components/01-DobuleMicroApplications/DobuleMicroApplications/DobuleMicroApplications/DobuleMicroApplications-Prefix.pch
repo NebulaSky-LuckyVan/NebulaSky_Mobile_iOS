@@ -1,0 +1,52 @@
+//
+//  DobuleMicroApplications-Prefix.pch
+//  DobuleMicroApplications
+//
+//  Created by VanZhang on 2020/11/17.
+//  Copyright © 2020 Alibaba. All rights reserved.
+//
+
+#ifndef DobuleMicroApplications_Prefix_pch
+#define DobuleMicroApplications_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+// MPAAS BEGIN
+// This part is maintained by MPaaS plugin automatically. Please don't modify.
+#ifdef __OBJC__
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <APCommonUI/APCommonUI.h>
+#import <MPPushSDK/MPPushSDK.h>
+#import <APMobileNetwork/APMobileNetwork.h>
+//#import <MPBadgeService/MPBadgeService.h>
+#import <NebulaAppManager/NebulaAppManager.h>
+#import <MPUTDIDAdapter/MPUtdidInterface.h>
+#import <AutoTracker/AutoTracker.h>
+#import <NebulaSDK/NebulaSDK.h>
+#import <Nebula/Nebula.h>
+#import <NebulaPoseidon/NebulaPoseidon.h>
+#import <APCrashReporter/DFCrashReport.h>
+#import <TianYan/TianYan.h>
+#import <MPNebulaAdapter/MPNebulaAdapterInterface.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <APMobileLBS/APMobileLBS.h>
+#import <MPMasAdapter/MPMasAdapter.h>
+#import <APMobileFramework/APMobileFramework.h>
+#import <APConfig/APConfigService.h>
+#import <APLog/APLog.h>
+#import <MPMgsAdapter/MPRpcInterface.h>
+#import <MPMssAdapter/MPSyncInterface.h>
+#import <APRemoteLogging/APRemoteLogging.h>
+#import <APLongLinkService/APLongLinkService.h>
+#import <TBScanSDK/TBScanSDK.h>
+#import <MAMapKit/MAMapKit.h>
+#import <NebulamPaaSBiz/NebulamPaaSBiz.h>
+#import <NebulaLogging/NebulaLogging.h>
+
+#endif
+// MPAAS END
+#endif /* DobuleMicroApplications_Prefix_pch */

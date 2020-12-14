@@ -1,0 +1,14 @@
+//
+//  NSMobileNetworkUITests-Prefix.pch
+//  NSMobileNetworkUITests
+//
+//  Created by vanzhang on 2020/11/30.
+
+// MPAAS HEADERS BEGIN
+// This part is maintained by MPaaS plugin automatically. 
+#ifdef __OBJC__
+
+#import "NSMobileNetworkUITests-mPaaS-Headers.h"
+
+#endif
+// MPAAS HEADERS END

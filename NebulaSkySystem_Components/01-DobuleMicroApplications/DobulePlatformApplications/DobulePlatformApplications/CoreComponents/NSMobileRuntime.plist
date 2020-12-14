@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Launcher</key>
+	<string>App1LauncherId</string>
+	<key>Services</key>
+	<array/>
+	<key>Applications</key>
+	<array>
+		<dict>
+			<key>delegate</key>
+			<string>App1LauncherMicroAppDelegate</string>
+			<key>description</key>
+			<string>App1Launcher</string>
+			<key>name</key>
+			<string>App1LauncherId</string>
+		</dict>
+		<dict>
+			<key>delegate</key>
+			<string>App2LauncherMicroAppDelegate</string>
+			<key>description</key>
+			<string>App2Launcher</string>
+			<key>name</key>
+			<string>App2LauncherId</string>
+		</dict>
+	</array>
+	<key>ServicesMap</key>
+	<dict>
+		<key>[AUTOSTART]</key>
+		<array/>
+	</dict>
+</dict>
+</plist>
