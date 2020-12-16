@@ -89,6 +89,7 @@
 }
 - (NSPushNotificationService*(^)(NSString*,NSData*))requestSetDeviceToken{
     return ^(NSString*deviceTokenString,NSData*deviceToken){
+        [NSRTCChatManager shareManager].deviceToken  = deviceTokenString;
         [[PushService sharedService]setDeviceToken:deviceToken];
         return self;
     };

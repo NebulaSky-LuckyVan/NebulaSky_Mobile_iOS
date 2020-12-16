@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "NSBaseModel.h"
-#import <YYModel/YYModel.h>
- 
+#import <YYModel/YYModel.h> 
+
 @class NSRTCMessageBody;
 
 
@@ -23,7 +23,6 @@ typedef NS_ENUM(NSInteger, NSRTCMessageType) {
 };
 
 typedef NS_ENUM(NSInteger, NSRTCMessageSendStatus) {
-    
     NSRTCMessageSending,   // 正在发送
     NSRTCMessageSendSuccess,   // 发送成功
     NSRTCMessageSendFail   // 发送失败
@@ -119,3 +118,4 @@ typedef NS_ENUM(NSInteger, NSRTCMessageSendStatus) {
 @property (nonatomic, weak) NSRTCMessage *superModel;
 @end
 
+ 

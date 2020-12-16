@@ -114,7 +114,6 @@ static id _instance;
         [launchConfig setValue:@{@"auth_token" : token} forKey:@"connectParams"];
     }
     [NSRTCClient shareClient].connectWithServerPathAndLaunchConfig(serverURLPath,launchConfig);
-//    [[NSRTCClient shareClient]launchWithDomainURL:serverURLPath parmartets:launchConfig];
     
 }
 - (void)requestSingleChatRoomWithTargetUser:(NSString*)toUser success:(void(^)(NSString*roomId))successHandler fail:(void(^)(void))failHandler{

@@ -7,39 +7,12 @@
 //
 
 #import "NSRTCChatViewController.h"
-//
-//#import <NSRTC/NSRTCChatManager.h>
-//#import <NSRTC/NSRTCClient.h>
-//#import <NSRTC/NSCategoties.h>
-//#import <NSRTC/NSRTCAVLiveChatUser.h>
-//#import <NSRTC/NSRTCChatViewModel.h>
-//#import <NSRTC/NSAudioHandlerKit.h>
-//#import <NSRTC/NSAudioFileProcesser.h>
-//#import <NSRTC/NSRTCVideoPlayer.h>
-//#import <NSRTC/NSRTCURLRequestOperation.h>
-//#import <NSRTC/NSRTCChatUser.h>
-//#import <NSRTC/NSRTCMessage.h>
-//#import <NSRTC/NSRTCConversation.h>
-//#import <NSRTC/NSRTCChatListViewModel.h>
-//#import <NSRTC/NSRTCChatMessageDBManager.h>
-//#import <NSRTC/NSRTCChatViewModel.h>
 
 
 
 #import "NSRTCChatManager.h"
-#import "NSRTCClient.h"
 #import "NSCategories.h"
-#import "NSRTCAVLiveChatUser.h"
-#import "NSRTCChatViewModel.h"
-#import "NSAudioHandlerKit.h"
-#import "NSAudioFileProcesser.h"
-#import "NSVideoPlayer.h"
-#import "NSRTCURLRequestOperation.h"
-#import "NSRTCChatUser.h"
 #import "NSRTCMessage.h"
-#import "NSRTCConversation.h"
-#import "NSRTCChatListViewModel.h"
-#import "NSRTCChatMessageDBOperation.h"
 #import "NSRTCChatViewModel.h"
 
 
@@ -50,7 +23,6 @@
 #import "NSRTCChatImageBrowserModel.h"
 #import "NSRTCChatLocationDetailController.h"
 #import "NSRTCVideoViewController.h"
-#import "NSRTCChatListViewController.h"
 
 
 #import "NSRTCMessageInputView.h"
@@ -373,7 +345,6 @@
     NSRTCAVLivePhoneCallViewController *phoneCallPage = [NSRTCAVLivePhoneCallViewController takePhoneCall:NSRTCAVLivePhoneCallVideoCall toUser:self.toUser];
     phoneCallPage.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:phoneCallPage animated:YES completion:nil];
-    
 }
 
 /**
@@ -469,35 +440,35 @@
     switch (index) {
         case 0: { // 相册选择照片
             [self chooseImagesFormAlbum];
-            break;
-        }
+            
+        }break;
             
         case 1:{ // 拍摄
             [self takePhoto];
-            break;
-        }
+           
+        } break;
         case 2: { // 位置
             [self sendLocation];
-            break;
-        }
+           
+        } break;
         case 3: { // 直播
             
-            break;
-        }
+           
+        } break;
             
             
         case 4:{ // 视频通话
             [self goToVideoChatRoom];
-            break;
-        }
+            
+        }break;
         case 5: { // 语音通话
             [self goToAudioChatRoom];
-            break;
-        }
+           
+        } break;
         case 6: { // 视频共享
             
-            break;
-        }
+           
+        } break;
         default:
             break;
     }
@@ -515,17 +486,19 @@
     DLog(@"%@", [message yy_modelToJSONString]);
     message.sendStatus = NSRTCMessageSending;
     [self.viewModel updateSendStatusUIWithMessage:message];
-    __weak typeof(self) weakSelf = self;
-    [[NSRTCChatManager shareManager] resendMessage:message sendStatus:^(NSRTCMessage *message) {
-        [self.viewModel updateSendStatusUIWithMessage:message];
+    __weak typeof(self) weakSelf = self; 
+    [NSRTCMessageSender reSendMessage:message success:^{
+        [weakSelf.viewModel updateSendStatusUIWithMessage:message];
+    } fail:^{
+        NSLog(@"消息发送失败:%s",__func__);
     }];
+    
 }
 
 - (void)didTapContentOfMessageCell:(NSRTCMessageCell *)cell meesage:(NSRTCDemoMessage *)message{
     
     switch (message.type) {
         case NSRTCMessageImage:{
-            
             NSMutableArray *array = [NSMutableArray array];
             NSInteger index = 0;
             NSInteger index1 = 0;

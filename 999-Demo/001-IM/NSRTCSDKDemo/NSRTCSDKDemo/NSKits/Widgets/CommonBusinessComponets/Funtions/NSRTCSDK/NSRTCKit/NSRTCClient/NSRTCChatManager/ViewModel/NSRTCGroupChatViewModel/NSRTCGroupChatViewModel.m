@@ -15,7 +15,7 @@
  @param text 文本
  */
 - (void)groupChatSendTextMessageWithText:(NSString *)text{
-    
+    NSLog(@"%s",__func__);
 }
 
 /**
@@ -25,7 +25,7 @@
  @param duration 语音持续时长
  */
 - (void)groupChatSendAudioMessageWithAudioSavePath:(NSString *)audioSavePath duration:(CGFloat)duration{
-    
+    NSLog(@"%s",__func__);
 }
  
 /**
@@ -34,7 +34,7 @@
  @param imgData 图片文件
  */
 - (void)groupChatSendImageMessageWithImgData:(NSData *)imgData image:(UIImage *)image size:(NSDictionary *)size{
-    
+    NSLog(@"%s",__func__);
 }
 
 
@@ -45,6 +45,6 @@
  @param locationName 定位名字
  */
 - (void)groupChatSendLocationMessageWithLocation:(CLLocationCoordinate2D)location locationName:(NSString *)locationName detailLocationName:(NSString *)detailLocationName{
-    
+    NSLog(@"%s",__func__);
 }
 @end

@@ -43,9 +43,7 @@
 
 
 - (void)setBodies:(NSRTCMessageBody *)bodies {
-    _bodies = bodies;
-    
-    
+    _bodies = bodies; 
     NSString *type = bodies.type;
     if ([type isEqualToString:@"txt"]) {
         self.type = NSRTCMessageText;
@@ -105,3 +103,4 @@
 }
 
 @end
+ 

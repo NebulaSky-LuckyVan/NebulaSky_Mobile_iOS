@@ -40,6 +40,7 @@
 }
 
 - (void)logout{
+    [[NSRTCClient shareClient] closeClient];
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:kDidLogin];
     [[NSUserDefaults standardUserDefaults] synchronize];
 //    [UIApplication sharedApplication].delegate.window.rootViewController = [[NSLoginPageController alloc]init];

@@ -7,36 +7,11 @@
 //
 
 #import "NSChatPageController.h"
-//
-//#import <NSRTC/NSRTCChatManager.h>
-//#import <NSRTC/NSRTCClient.h>
-//#import <NSRTC/NSCategoties.h>
-//#import <NSRTC/NSRTCAVLiveChatUser.h>
-//#import <NSRTC/NSRTCChatViewModel.h>
-//#import <NSRTC/NSAudioHandlerKit.h>
-//#import <NSRTC/NSAudioFileProcesser.h>
-//#import <NSRTC/NSRTCVideoPlayer.h>
-//#import <NSRTC/NSRTCNetwork.h>
-//#import <NSRTC/NSRTCChatUser.h>
-//#import <NSRTC/NSRTCMessage.h>
-//#import <NSRTC/NSRTCConversation.h>
-//#import <NSRTC/NSRTCChatListViewModel.h>
-//#import <NSRTC/NSRTCChatMessageDBManager.h>
-//#import <NSRTC/NSRTCChatViewModel.h>
 
 
 #import "NSRTCChatManager.h"
-#import "NSRTCClient.h"
 #import "NSCategories.h"
-#import "NSRTCAVLiveChatUser.h"
-#import "NSRTCChatViewModel.h"
-#import "NSAudioHandlerKit.h"
-#import "NSAudioFileProcesser.h"
-#import "NSVideoPlayer.h"
-#import "NSRTCChatUser.h"
 #import "NSRTCMessage.h"
-#import "NSRTCConversation.h"
-#import "NSRTCChatListViewModel.h"
 #import "NSRTCChatViewModel.h"
 
 #import "NSRTCDemoMessage.h"
@@ -46,7 +21,6 @@
 #import "NSRTCChatImageBrowserModel.h"
 #import "NSRTCChatLocationDetailController.h"
 #import "NSRTCVideoViewController.h"
-#import "NSRTCChatListViewController.h"
 
 
 #import "NSRTCMessageInputView.h"
@@ -494,8 +468,10 @@
     message.sendStatus = NSRTCMessageSending;
     [self.viewModel updateSendStatusUIWithMessage:message];
     __weak typeof(self) weakSelf = self;
-    [[NSRTCChatManager shareManager] resendMessage:message sendStatus:^(NSRTCMessage *message) {
+    [NSRTCMessageSender reSendMessage:message success:^{
         [weakSelf.viewModel updateSendStatusUIWithMessage:message];
+    } fail:^{
+        NSLog(@"消息重发失败:%s",__func__);
     }];
 }
 

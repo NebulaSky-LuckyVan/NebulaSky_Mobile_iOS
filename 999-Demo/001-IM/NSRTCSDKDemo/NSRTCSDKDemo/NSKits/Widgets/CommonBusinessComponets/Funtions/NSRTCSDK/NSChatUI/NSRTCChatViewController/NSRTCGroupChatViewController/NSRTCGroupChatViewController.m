@@ -8,8 +8,7 @@
 
 #import "NSRTCGroupChatViewController.h"
 
-#import "NSRTCChatManager.h"
-#import "NSRTCClient.h"
+#import "NSRTCChatManager.h" 
 #import "NSCategories.h"
 #import "NSRTCAVLiveChatUser.h"
 #import "NSRTCGroupChatViewModel.h"
@@ -195,8 +194,6 @@
         [weakSelf.tableView reloadData];
         if (weakSelf.isFirstLoad) {    // 第一次加载，滚动到底部
             weakSelf.isFirstLoad = NO;
-            
-            
             CGPoint tableOffset = weakSelf.tableView.contentOffset;
             UIEdgeInsets insets = weakSelf.tableView.contentInset;
             CGFloat addOffset = (weakSelf.tableView.contentSize.height - weakSelf.tableView.height + insets.bottom + 64);
@@ -223,8 +220,7 @@
     
     NSRTCMessageCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
     
-    if (cell) { // cell存在
-        
+    if (cell) { // cell存在 
         if ([cell.contentBackView isKindOfClass:[NSRTCImageMessageContentView class]]) { // 图片类型
             UIView *view = cell.contentBackView;
             CGRect rect = [kKeyWindow convertRect:view.bounds fromView:view];
@@ -270,7 +266,8 @@
                         
                         BOOL downloadFinined = (![[info objectForKey:PHImageCancelledKey] boolValue] && ![info objectForKey:PHImageErrorKey]);
                         if (downloadFinined && imageData) {// 图片数据不为空才传递
-                            [weakSelf.viewModel sendImageMessageWithImgData:imageData image:image size:size];
+//                            [weakSelf.viewModel sendImageMessageWithImgData:imageData image:image size:size];
+                            [weakSelf.viewModel groupChatSendImageMessageWithImgData:imageData image:image size:size];
                         }
                     }];
                 }
@@ -279,13 +276,13 @@
                         ALAsset *alsset = asset;
                         UIImage *image = [UIImage imageWithCGImage:[alsset thumbnail]];
                         NSData *imgData = UIImageJPEGRepresentation(image, 1);
-                        [weakSelf.viewModel sendImageMessageWithImgData:imgData image:image size:size];
+                        [weakSelf.viewModel groupChatSendImageMessageWithImgData:imgData image:image size:size];
                     });
                 }
             }else {
                 @autoreleasepool {
                     NSData *imageData = UIImageJPEGRepresentation(image, 1);
-                    [self.viewModel sendImageMessageWithImgData:imageData image:image size:size];
+                    [self.viewModel groupChatSendImageMessageWithImgData:imageData image:image size:size];
                 }
             }
             index++;
@@ -332,7 +329,7 @@
 
         if (isPhoto) { // 照片
 
-            [weakSelf.viewModel sendImageMessageWithImgData:data image:[UIImage imageWithData:data] size:@{@"width" : @(kScreenWidth * 2), @"height" : @(kScreenHeight * 2)}];
+            [weakSelf.viewModel groupChatSendImageMessageWithImgData:data image:[UIImage imageWithData:data] size:@{@"width" : @(kScreenWidth * 2), @"height" : @(kScreenHeight * 2)}];
         }
         else {  // 视频
 
@@ -354,7 +351,8 @@
         
         locationName = locationName.length ? locationName : @"位置";
         NSLog(@"发送位置坐标:%lf===%lf", coordinate.latitude, coordinate.longitude);
-        [weakSelf.viewModel sendLocationMessageWithLocation:coordinate locationName:locationName detailLocationName:detailLocationName];
+        
+        [weakSelf.viewModel groupChatSendLocationMessageWithLocation:coordinate locationName:locationName detailLocationName:detailLocationName];
     }];
 }
 
@@ -446,14 +444,14 @@
 
 - (void)messageInputView:(NSRTCMessageInputView *)inputView sendText:(NSString *)text {
     
-    [self.viewModel sendTextMessageWithText:text];
+    [self.viewModel groupChatSendTextMessageWithText:text];
     
     
 }
 // 发送语音
 - (void)messageInputView:(NSRTCMessageInputView *)inputView sendVoice:(NSString *)saveFile duration:(CGFloat)duration {
     
-    [self.viewModel sendAudioMessageWithAudioSavePath:saveFile duration:duration];
+    [self.viewModel groupChatSendAudioMessageWithAudioSavePath:saveFile duration:duration];
 }
 
 - (void)messageInputView:(NSRTCMessageInputView *)inputView addIndexClicked:(NSInteger)index {
@@ -509,9 +507,11 @@
     message.sendStatus = NSRTCMessageSending;
     [self.viewModel updateSendStatusUIWithMessage:message];
     __weak typeof(self) weakSelf = self;
-    [[NSRTCChatManager shareManager] resendMessage:message sendStatus:^(NSRTCMessage *message) {
-        [self.viewModel updateSendStatusUIWithMessage:message];
-    }];
+    [NSRTCMessageSender reSendMessage:message success:^{
+        [weakSelf.viewModel updateSendStatusUIWithMessage:message];
+    } fail:^{
+        NSLog(@"消息重发失败:%s",__func__);
+    }]; 
 }
 
 - (void)didTapContentOfMessageCell:(NSRTCMessageCell *)cell meesage:(NSRTCDemoMessage *)message{

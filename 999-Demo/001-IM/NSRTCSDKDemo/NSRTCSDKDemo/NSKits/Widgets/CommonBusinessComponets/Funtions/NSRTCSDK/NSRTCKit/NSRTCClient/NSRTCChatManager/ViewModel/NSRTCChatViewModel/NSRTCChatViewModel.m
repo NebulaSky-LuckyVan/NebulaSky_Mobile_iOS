@@ -61,18 +61,14 @@
 
 
 #pragma mark - Data
-- (void)queryDataFromDB:(void(^)(NSArray *datasource))ComplectionHandlerBlock {
-    
-    
+- (void)queryDataFromDB:(void(^)(NSArray *datasource))ComplectionHandlerBlock { 
     if (self.loadAllMessage) {
-        
         [UIView showStatus:@"没有更多消息记录"];
         !ComplectionHandlerBlock?:ComplectionHandlerBlock(self.dataSource);
         return;
     }
     NSInteger limit = 10;
     NSArray *dataArray = [[NSRTCChatMessageDBOperation shareInstance] queryMessagesWithUser:self.toUser limit:limit page:_currentPage];
-    
     _currentPage ++;
     if (dataArray.count < limit) {
         self.loadAllMessage = YES;
@@ -84,8 +80,7 @@
 /**
  将当前会话添加到消息列表中
  */
-- (void)addCurrentConversationToChatList {
-    
+- (void)addCurrentConversationToChatList { 
     if (self.dataSource.count) { // 当前会话中有消息记录
         NSRTCMessage *message = [self.dataSource lastObject];
         if ([message.from isEqualToString:[NSRTCChatManager shareManager].user.currentUserID]) { // 消息是自己发送的，则更新消息列表最新消息UI（接收到别人的消息, chatListVC会更新UI,这里不做处理）
@@ -100,9 +95,12 @@
  */
 - (void)sendTextMessageWithText:(NSString *)text {
     __weak typeof(self) weakSelf = self;
-    NSRTCMessage *message = [[NSRTCChatManager shareManager] sendTextMessage:text toUser:_toUser sendStatus:^(NSRTCMessage *newMessage) {
-        
-        [weakSelf updateSendStatusUIWithMessage:newMessage];
+    
+    NSRTCMessage *message = [NSRTCMessageConstructor textMessage:text withReceiver:_toUser];
+    [NSRTCMessageSender sendMessage:message success:^{
+        [weakSelf updateSendStatusUIWithMessage:message];
+    } fail:^{
+        NSLog(@"消息发送失败:%s",__func__);
     }];
     [self chatManager:nil receivedMessage:message];
 }
@@ -115,8 +113,11 @@
  */
 - (void)sendAudioMessageWithAudioSavePath:(NSString *)audioSavePath duration:(CGFloat)duration {
     __weak typeof(self) weakSelf = self;
-    NSRTCMessage *message = [[NSRTCChatManager shareManager] sendAudioMessage:audioSavePath duration:duration toUser:_toUser sendStatus:^(NSRTCMessage *newMessage) {
-        [weakSelf updateSendStatusUIWithMessage:newMessage];
+    NSRTCMessage *message = [NSRTCMessageConstructor audioMessageWithAudioFilePath:audioSavePath duration:duration withReceiver:_toUser];
+    [NSRTCMessageSender sendMessage:message success:^{
+        [weakSelf updateSendStatusUIWithMessage:message];
+    } fail:^{
+        NSLog(@"消息发送失败:%s",__func__);
     }];
     [self chatManager:nil receivedMessage:message];
 }
@@ -130,10 +131,15 @@
 - (void)sendImageMessageWithImgData:(NSData *)imgData image:(UIImage *)image size:(NSDictionary *)size{
     
     __weak typeof(self) weakSelf = self;
-    NSRTCMessage *message = [[NSRTCChatManager shareManager] sendImgMessage:imgData  sImageData:UIImageJPEGRepresentation(image, 1) toUser:self.toUser sendStatus:^(NSRTCMessage *newMessage) {
-        
-        [weakSelf updateSendStatusUIWithMessage:newMessage];
+    
+    
+    NSRTCMessage *message = [NSRTCMessageConstructor imageMessageWithImgData:imgData smallImageData:UIImageJPEGRepresentation(image, 1) withReceiver:self.toUser];
+    [NSRTCMessageSender sendMessage:message success:^{
+        [weakSelf updateSendStatusUIWithMessage:message];
+    } fail:^{
+        NSLog(@"消息发送失败:%s",__func__);
     }];
+     
     [self chatManager:nil receivedMessage:message];
 }
 
@@ -146,16 +152,17 @@
  */
 - (void)sendLocationMessageWithLocation:(CLLocationCoordinate2D)location locationName:(NSString *)locationName detailLocationName:(NSString *)detailLocationName{
     __weak typeof(self) weakSelf = self;
-    NSRTCMessage *message = [[NSRTCChatManager shareManager] sendLocationMessage:location locationName:locationName detailLocationName:detailLocationName toUser:self.toUser sendStatus:^(NSRTCMessage *newMessage) {
-        
-        [weakSelf updateSendStatusUIWithMessage:newMessage];
+    NSRTCMessage *message = [NSRTCMessageConstructor locationMessageWithCoordinate2DValue:location locationName:locationName detailLocationName:detailLocationName withReceiver:self.toUser];
+    [NSRTCMessageSender sendMessage:message success:^{
+        [weakSelf updateSendStatusUIWithMessage:message];
+    } fail:^{
+        NSLog(@"消息发送失败:%s",__func__);
     }];
     [self chatManager:nil receivedMessage:message];
 }
 
 // 更新消息列表未读消息数量, 更新数据库
-- (void)updateUnreadMessageRedIconForListAndDB {
-    
+- (void)updateUnreadMessageRedIconForListAndDB { 
     [[NSRTCChatManager shareManager].chatListPageViewModel updateRedPointForUnreadWithConveration:self.toUser];
     [[NSRTCChatMessageDBOperation shareInstance] updateUnreadCountOfConversation:self.toUser unreadCount:0];
 }
@@ -181,34 +188,13 @@
         !self.updateAfterReceivingMessageHandlerBlock?:self.updateAfterReceivingMessageHandlerBlock(self.dataSource);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
 #pragma mark - Pravite
-
 /**
  刷新消息的发送状态
  
  @param message 消息
  */
 - (void)updateSendStatusUIWithMessage:(NSRTCMessage *)message {
-    
     NSInteger index = [self.dataSource indexOfObject:message];
     if (index >= 0) {
         !self.updateSendStatusWithMessageHandlerBlock?:self.updateSendStatusWithMessageHandlerBlock(message);

@@ -6,11 +6,8 @@
 //  Copyright © 2019 VanZhang. All rights reserved.
 //
 
-
-//#import <NSRTCSDK/NSRTCBaseViewController.h>
-//#import <NSRTC/NSRTCBaseViewController.h>
-
-//#import "NSRTCBaseViewController.h"
+ 
+#import "NSRTCBaseViewController.h"
 
 @interface NSRTCChatViewController : NSRTCBaseViewController
 

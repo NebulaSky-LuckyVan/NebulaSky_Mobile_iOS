@@ -260,7 +260,11 @@ static id _instance;
     };
 }
  
-
++ (ClientStatus)status{
+    NSUInteger statusValue = [[NSBaseSocketIOOperation shareSocket]checkStatus];
+    ClientStatus status = statusValue;
+    return status;
+}
 
 
 - (void)registerCallBack{
@@ -270,6 +274,35 @@ static id _instance;
     [self imMessageMonitor];
     
 }
+
+//-----------------------------------------------------------------------//
+//---------------------CS_machine-Connection_State-----------------------//
+//-----------------------------------------------------------------------//
+#pragma mark-1.CS state machine Connect Status
+- (void)socketConnectStatusMonitor{
+    __weak typeof(self) weakSelf = self;
+    [NSBaseSocketIOOperation shareSocket].serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
+        !weakSelf.callOnConnectedSuccessHandler?:weakSelf.callOnConnectedSuccessHandler();
+        !weakSelf.callOnConnectedResponseHandler?:weakSelf.callOnConnectedResponseHandler(@"",@"",@{});
+    },@"connect").serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
+        NSLog(@"socket connect_error:data",data);
+        !weakSelf.callOnConnectedErrorResponseHandler?:weakSelf.callOnConnectedErrorResponseHandler(@"",@"",@{});
+    },@"error").serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
+        NSLog(@"socket reconnectAttempt:data",data);
+        !weakSelf.callOnReconnectedAttemptResponseHandler?:weakSelf.callOnReconnectedAttemptResponseHandler(@"",@"",@{});
+    },@"reconnectAttempt").serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
+        //        double cur = [[data objectAtIndex:0] floatValue];
+        //        [[socket emitWithAck:@"canUpdate" with:@[@(cur)]] timingOutAfter:0 callback:^(NSArray* data) {
+        //            [socket emit:@"update" with:@[@{@"amount": @(cur + 2.50)}]];
+        //        }];
+        
+        [ack with:@[@"Got your currentAmount, ", @"dude"]];
+    },@"currentAmount");
+}
+//-----------------------------------------------------------------------//
+//---------------------Users-Status-Monitor------------------------------//
+//-----------------------------------------------------------------------//
+#pragma mark-2.User Online Status Based On CS state machine connecting Status
 - (void)userStatusMonitor{
     __weak typeof(self) weakSelf = self;
     //
@@ -285,25 +318,72 @@ static id _instance;
         ClientStatus status = statusValue; !weakSelf.callOnClientStatusChangedNotifyHandler?:weakSelf.callOnClientStatusChangedNotifyHandler(status);
         // 连接状态改变
     },@"statusChange");
-    
-    
 }
-+ (ClientStatus)status{
-    NSUInteger statusValue = [[NSBaseSocketIOOperation shareSocket]checkStatus];
-    ClientStatus status = statusValue;
-    return status;
-}
+//-----------------------------------------------------------------------//
+//---------------------IM-Message-Monitor--------------------------------//
+//-----------------------------------------------------------------------//
+#pragma mark-3.IM message send&receive Based on User online Statu
 
+#pragma mark-AudioVideoChat Message Monitor
 - (void)imMessageMonitor{
+    [self singleChatMonitoring];
+    [self groupChatMonitoring];
+    [self singleAudioVideoWEBRTCServiceChatRoomConnectStatusMonitor];
+}
+- (void)singleChatMonitoring{
     __weak typeof(self) weakSelf = self;
-    //单聊
+    //富文本单聊
     [NSBaseSocketIOOperation shareSocket].serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
        
         !weakSelf.callOnReceivedMessageHandler?:weakSelf.callOnReceivedMessageHandler(data.firstObject);
         
         [ack with:@[@[@"我已收到普通消息了消息"]]];
         // 收到消息
-    },@"chat").serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
+    },@"chat");
+}
+/*
+     newGroup 发起一个群聊
+     joinGroup 用户x加入群聊
+     leaveGroup 用户x离开群聊 _服务端暂时没有
+     rejectGroup 用户x拒绝接受群聊邀请 _服务端暂时没有
+     messageGroup 用户x在群聊房间发出了富文本信息
+     messageInGroup 用户x在群聊房间收到了富文本信息
+ */
+- (void)groupChatMonitoring{
+    __weak typeof(self) weakSelf = self;
+    //群聊监听1
+#pragma mark- 音视频群聊监听 待后台定义好后再完善
+    [NSBaseSocketIOOperation shareSocket].serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
+        [ack with:@[@"我已收到NewGroup消息"]];
+    },@"newGroup").serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
+        [ack with:@[@"我已收到JoinGroup消息"]];
+    },@"joinGroup").serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
+        [ack with:@[@"我已收到LeaveGroup消息"]];
+    },@"leaveGroup").serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
+        [ack with:@[@"我已收到RejectGroup消息"]];
+    },@"rejectGroup").serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
+        [ack with:@[@"我已收到MessageGroup消息"]];
+    },@"messageInGroup");
+    
+}
+#pragma mark-AudioVideoChat ChatRoom State Monitor
+/*
+ Chat Room Channel Message
+    握手:
+    主动发起者——offer
+    接收者-anwser
+    p2p通讯信道 candidate
+ Chat Room status Message
+    加入
+    离开
+    房间满了
+    其他人加入
+    其他人挂断
+ */
+- (void)singleAudioVideoWEBRTCServiceChatRoomConnectStatusMonitor{
+    __weak typeof(self) weakSelf = self;
+    //音视频电话的邀请、拒接
+    [NSBaseSocketIOOperation shareSocket].serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
         !weakSelf.callOnReceivedVideoChatInvitationHandler?:weakSelf.callOnReceivedVideoChatInvitationHandler(data.firstObject);
       
         [ack with:@[@[@"我已收到VideoChat消息"]]];
@@ -319,25 +399,9 @@ static id _instance;
         !weakSelf.callOnReceivedVideoChatInvitationRejectedHandler?:weakSelf.callOnReceivedVideoChatInvitationRejectedHandler(data.firstObject);
       
     },@"rejected");
-    //群聊监听1
-#pragma mark- 音视频群聊监听 待后台定义好后再完善
-    [NSBaseSocketIOOperation shareSocket].serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
-        [ack with:@[@"我已收到MessageGroup消息"]];
-    },@"messageGroup").serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
-        [ack with:@[@"我已收到JoinGroup消息"]];
-    },@"joinGroup").serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
-        [ack with:@[@"我已收到NewGroup消息"]];
-    },@"newGroup").serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
-        [ack with:@[@"我已收到LeaveGroup消息"]];
-    },@"leaveGroup").serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
-        [ack with:@[@"我已收到RejectGroup消息"]];
-    },@"rejectGroup");
-     
+
     
-    [self audioVideoWEBRTCServiceChatRoomConnectStatusMonitor];
-}
-- (void)audioVideoWEBRTCServiceChatRoomConnectStatusMonitor{
-    __weak typeof(self) weakSelf = self;
+    //音视频电话的聊天室
     [NSBaseSocketIOOperation shareSocket].serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
         NSString* room = [data objectAtIndex:0];
         NSString* userId = [data objectAtIndex:1];
@@ -388,33 +452,31 @@ static id _instance;
     
     //音视频群聊监听
     
-#pragma mark- 音视频群聊监听 待后台定义好后再完善
+
+}
+#pragma warning mark-音视频群聊监听 待后台定义好后再完善
+- (void)groupAudioVideoWEBRTCServiceChatRoomConnectStatusMonitor{
     [NSBaseSocketIOOperation shareSocket].serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
         
     },@"");
 }
-- (void)socketConnectStatusMonitor{
-    
-    __weak typeof(self) weakSelf = self;
-    [NSBaseSocketIOOperation shareSocket].serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
-        !weakSelf.callOnConnectedSuccessHandler?:weakSelf.callOnConnectedSuccessHandler();
-        !weakSelf.callOnConnectedResponseHandler?:weakSelf.callOnConnectedResponseHandler(@"",@"",@{});
-    },@"connect").serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
-        NSLog(@"socket connect_error");
-        !weakSelf.callOnConnectedErrorResponseHandler?:weakSelf.callOnConnectedErrorResponseHandler(@"",@"",@{});
-    },@"error").serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
-        NSLog(@"socket reconnectAttempt");
-        !weakSelf.callOnReconnectedAttemptResponseHandler?:weakSelf.callOnReconnectedAttemptResponseHandler(@"",@"",@{});
-    },@"reconnectAttempt").serverEventMonitorRegisterWithEventToken(^(NSArray * data, SocketAckEmitter * ack){
-        //        double cur = [[data objectAtIndex:0] floatValue];
-        //        [[socket emitWithAck:@"canUpdate" with:@[@(cur)]] timingOutAfter:0 callback:^(NSArray* data) {
-        //            [socket emit:@"update" with:@[@{@"amount": @(cur + 2.50)}]];
-        //        }];
-        
-        [ack with:@[@"Got your currentAmount, ", @"dude"]];
-    },@"currentAmount");
-}
+
+
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+
+#pragma Send Chat Message
+
+
+#pragma mark-Send Chat Message Only
 #pragma SingleAVChat
+//发送消息 offer anwser candidate
+- (NSRTCClient *(^)(NSString *,NSDictionary*))sendAVChatRoomMessage{
+    return ^(NSString*roomId,NSDictionary*message){
+        [NSBaseSocketIOOperation shareSocket].excuteEvent(@"message",@[roomId, message]);
+        return self;
+    };
+}
 //加入房间
 - (NSRTCClient *(^)(NSString *))joinAVChatRoom{
     return ^(NSString*roomId){
@@ -432,46 +494,25 @@ static id _instance;
 //拒接
 - (NSRTCClient *(^)(NSDictionary *,NSString *))rejectAVPhoneCall{
     return ^(NSDictionary*user,NSString*roomId){
-        
         [NSBaseSocketIOOperation shareSocket].excuteEvent(@"reject",@[roomId,user]);
         return self;
     };
 }
-//发送消息
-- (NSRTCClient *(^)(NSString *,NSDictionary*))sendAVChatRoomMessage{
-    return ^(NSString*roomId,NSDictionary*message){
-        [NSBaseSocketIOOperation shareSocket].excuteEvent(@"message",@[roomId, message]);
-        return self;
-    };
-}
-
-
-
-
-
-
-
-
-
 
 
 #pragma GroupChat
 - (NSRTCClient *(^)(NSArray *,NSString*,NSString*))setupGroupMessage{
     return ^(NSArray *groupUsers,NSString*roomMessageOrigin,NSString*roomId){
-        
         [NSBaseSocketIOOperation shareSocket].excuteEvent(@"newGroup",@[roomId,roomMessageOrigin,groupUsers]);
         return self;
     };
 }
-
 /*
  1.加入群聊聊天室
  */
 - (NSRTCClient*(^)(NSArray *groupUsers,NSString *,NSString*))joinGroupChatRoom{
     return ^(NSArray *groupUsers,NSString*roomMessageOrigin,NSString*roomId){
-        
-        [NSBaseSocketIOOperation shareSocket].excuteEvent(@"newGroup",@[roomId,roomMessageOrigin,groupUsers]);
-        
+        [NSBaseSocketIOOperation shareSocket].excuteEvent(@"joinGroup",@[roomId,roomMessageOrigin,groupUsers]);
         return self;
     };
 }
@@ -480,9 +521,7 @@ static id _instance;
  */
 - (NSRTCClient*(^)(NSString *,NSString*))leaveGroupChatRoom{
     return ^(NSString *user,NSString*roomId){
-        
         [NSBaseSocketIOOperation shareSocket].excuteEvent(@"leaveGroup",@[roomId,user]);
-        
         return self;
     };
 }
@@ -496,45 +535,28 @@ static id _instance;
         return self;
     };
 }
+//---------------------------------------------------------//
+
+#pragma mark-Send Chat Message And Wait for response(Current Device User is Agent receiver)
+#pragma Send Chat Message And Wait for response(Current Device User is Agent sender)
 
 
-
-
-// 发送即时通讯消息
-+ (void)sendChatMessage:(NSDictionary *)message success:(void(^)(NSDictionary*respnse))successHandler fail:(void(^)(void))failHandler {
-    [NSBaseSocketIOOperation shareSocket].sendAckEvent(@"chat",@[message],^(NSArray*data){
+#pragma Single P2P Chat
+#pragma mark-P2P Audio Chat
++ (void)beginAudioChatFromUser:(NSString *)from toUser:(NSString *)to success:(void(^)(NSString*roomId))successHandler fail:(void(^)(void))failHandler{
+    [NSBaseSocketIOOperation shareSocket].sendAckEvent(@"audioChat",@[@{@"from_user":from, @"to_user":to, @"chat_type":@"chat"}],^(NSArray*data){
         if ([data.firstObject isKindOfClass:[NSString class]] && [data.firstObject isEqualToString:@"NO ACK"]) {  // 服务器没有应答
+            NSLog(@"房间创建失败");
             !failHandler?:failHandler();
-        }else {  // 服务器应答
-            NSDictionary *ackDic = data.firstObject;
-            !successHandler?:successHandler(ackDic);
+        } else {  // 服务器应答
+            NSLog(@"房间创建成功");
+            NSString *room = data.firstObject;
+            !successHandler?:successHandler(room);
         }
     });
 }
-// 发送群聊消息
-+ (void)sendGroupChatMessage:(NSDictionary *)message success:(void (^)(NSDictionary *))successHandler fail:(void (^)(void))failHandler {
-    [NSBaseSocketIOOperation shareSocket].sendAckEvent(@"chat",@[message],^(NSArray*data){
-        if ([data.firstObject isKindOfClass:[NSString class]] && [data.firstObject isEqualToString:@"NO ACK"]) {  // 服务器没有应答
-            !failHandler?:failHandler();
-        }else {  // 服务器应答
-            NSDictionary *ackDic = data.firstObject;
-            !successHandler?:successHandler(ackDic);
-        }
-    });
-}
-// 发起群聊
-+ (void)beginGroupChatMessage:(NSDictionary *)message success:(void (^)(NSDictionary *))successHandler fail:(void (^)(void))failHandler {
-    [NSBaseSocketIOOperation shareSocket].sendAckEvent(@"newGroup",@[message],^(NSArray*data){
-        if ([data.firstObject isKindOfClass:[NSString class]] && [data.firstObject isEqualToString:@"NO ACK"]) {  // 服务器没有应答
-            !failHandler?:failHandler();
-        }else {  // 服务器应答
-            NSDictionary *ackDic = data.firstObject;
-            !successHandler?:successHandler(ackDic);
-        }
-    });
-}
+#pragma mark-P2P Video Chat
 + (void)beginVideoChatFromUser:(NSString *)from toUser:(NSString *)to success:(void(^)(NSString*roomId))successHandler fail:(void(^)(void))failHandler{
-    
     [NSBaseSocketIOOperation shareSocket].sendAckEvent(@"videoChat",@[@{@"from_user":from, @"to_user":to, @"chat_type":@"chat"}],^(NSArray*data){
          if ([data.firstObject isKindOfClass:[NSString class]] && [data.firstObject isEqualToString:@"NO ACK"]) {  // 服务器没有应答
                NSLog(@"房间创建失败");
@@ -546,17 +568,40 @@ static id _instance;
            }
     });
 }
-
-+ (void)beginAudioChatFromUser:(NSString *)from toUser:(NSString *)to success:(void(^)(NSString*roomId))successHandler fail:(void(^)(void))failHandler{
-    
-    [NSBaseSocketIOOperation shareSocket].sendAckEvent(@"audioChat",@[@{@"from_user":from, @"to_user":to, @"chat_type":@"chat"}],^(NSArray*data){
+#pragma mark-P2P Normal RichText Message Chat
++ (void)sendChatMessage:(NSDictionary *)message success:(void(^)(NSDictionary*respnse))successHandler fail:(void(^)(void))failHandler {
+    [NSBaseSocketIOOperation shareSocket].sendAckEvent(@"chat",@[message],^(NSArray*data){
         if ([data.firstObject isKindOfClass:[NSString class]] && [data.firstObject isEqualToString:@"NO ACK"]) {  // 服务器没有应答
-            NSLog(@"房间创建失败");
             !failHandler?:failHandler();
-        } else {  // 服务器应答
-            NSLog(@"房间创建成功");
-            NSString *room = data.firstObject;
-            !successHandler?:successHandler(room);
+        }else {  // 服务器应答
+            NSDictionary *ackDic = data.firstObject;
+            !successHandler?:successHandler(ackDic);
+        }
+    });
+}
+
+#pragma GroupChat
+#pragma mark-GroupChat start Group Chat
+// 发起群聊
++ (void)beginGroupChatMessage:(NSDictionary *)message success:(void (^)(NSDictionary *))successHandler fail:(void (^)(void))failHandler {
+    [NSBaseSocketIOOperation shareSocket].sendAckEvent(@"newGroup",@[message],^(NSArray*data){
+        if ([data.firstObject isKindOfClass:[NSString class]] && [data.firstObject isEqualToString:@"NO ACK"]) {  // 服务器没有应答
+            !failHandler?:failHandler();
+        }else {  // 服务器应答
+            NSDictionary *ackDic = data.firstObject;
+            !successHandler?:successHandler(ackDic);
+        }
+    });
+}
+#pragma mark-GroupChat With Normal RichText Message
+// 发送群聊消息
++ (void)sendGroupChatMessage:(NSDictionary *)message success:(void (^)(NSDictionary *))successHandler fail:(void (^)(void))failHandler {
+    [NSBaseSocketIOOperation shareSocket].sendAckEvent(@"messageGroup",@[message],^(NSArray*data){
+        if ([data.firstObject isKindOfClass:[NSString class]] && [data.firstObject isEqualToString:@"NO ACK"]) {  // 服务器没有应答
+            !failHandler?:failHandler();
+        }else {  // 服务器应答
+            NSDictionary *ackDic = data.firstObject;
+            !successHandler?:successHandler(ackDic);
         }
     });
 }

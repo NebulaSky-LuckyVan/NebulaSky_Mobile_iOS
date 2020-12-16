@@ -160,6 +160,9 @@
 		AED8BFBC25807C5F003A211C /* NSMenuContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AED8BFBB25807C5F003A211C /* NSMenuContainerView.m */; };
 		AED8BFC22580AE3A003A211C /* NSRTCGroupChatViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AED8BFC12580AE3A003A211C /* NSRTCGroupChatViewModel.m */; };
 		AED8BFCA2580C389003A211C /* NSRTCGroupChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED8BFC92580C389003A211C /* NSRTCGroupChatViewController.m */; };
+		AEE3DF11258765A100585D32 /* NSRTCMessageConstructor.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE3DF10258765A100585D32 /* NSRTCMessageConstructor.m */; };
+		AEE3DF162588912800585D32 /* NSRTCMessageSender.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE3DF152588912700585D32 /* NSRTCMessageSender.m */; };
+		AEE3DF212588919500585D32 /* NSRTCMessageReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE3DF202588919500585D32 /* NSRTCMessageReceiver.m */; };
 		AEEA99372576351B00757E66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEA99362576351B00757E66 /* AppDelegate.m */; };
 		AEEA99422576351C00757E66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEA99412576351C00757E66 /* Assets.xcassets */; };
 		AEEA99452576351C00757E66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEA99432576351C00757E66 /* LaunchScreen.storyboard */; };
@@ -567,6 +570,12 @@
 		AED8BFC12580AE3A003A211C /* NSRTCGroupChatViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSRTCGroupChatViewModel.m; sourceTree = "<group>"; };
 		AED8BFC82580C389003A211C /* NSRTCGroupChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSRTCGroupChatViewController.h; sourceTree = "<group>"; };
 		AED8BFC92580C389003A211C /* NSRTCGroupChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSRTCGroupChatViewController.m; sourceTree = "<group>"; };
+		AEE3DF0F258765A100585D32 /* NSRTCMessageConstructor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSRTCMessageConstructor.h; sourceTree = "<group>"; };
+		AEE3DF10258765A100585D32 /* NSRTCMessageConstructor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSRTCMessageConstructor.m; sourceTree = "<group>"; };
+		AEE3DF142588912700585D32 /* NSRTCMessageSender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSRTCMessageSender.h; sourceTree = "<group>"; };
+		AEE3DF152588912700585D32 /* NSRTCMessageSender.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSRTCMessageSender.m; sourceTree = "<group>"; };
+		AEE3DF1F2588919500585D32 /* NSRTCMessageReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSRTCMessageReceiver.h; sourceTree = "<group>"; };
+		AEE3DF202588919500585D32 /* NSRTCMessageReceiver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSRTCMessageReceiver.m; sourceTree = "<group>"; };
 		AEEA99322576351B00757E66 /* NSRTCSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSRTCSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEA99352576351B00757E66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AEEA99362576351B00757E66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1182,11 +1191,11 @@
 			children = (
 				AE1F56302578B92D00A2E676 /* NSChatUI.h */,
 				AE1F562D2578B92D00A2E676 /* Base */,
+				AE1F55F02578B92C00A2E676 /* NSRTCChatViewController */,
 				AE1F55C92578B92C00A2E676 /* NSRTCAVLivePhoneCallViewController */,
 				AE1F55DE2578B92C00A2E676 /* NSRTCStatusTitleView */,
 				AE1F55E12578B92C00A2E676 /* NSRTCChatListCell */,
 				AE1F55E72578B92C00A2E676 /* NSRTCVideoViewController */,
-				AE1F55F02578B92C00A2E676 /* NSRTCChatViewController */,
 				AE1F55F52578B92C00A2E676 /* NSRTCMessageBubbleView */,
 				AE1F55F82578B92C00A2E676 /* NSRTCChatImageBrowserController */,
 				AE1F56012578B92C00A2E676 /* NSRTCMessageCell */,
@@ -1319,8 +1328,8 @@
 		AE1F55F02578B92C00A2E676 /* NSRTCChatViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AE1F57DF2578C45A00A2E676 /* NSRTCChatListViewController */,
 				AE1F57E62578C46700A2E676 /* NSRTCChatViewController */,
+				AE1F57DF2578C45A00A2E676 /* NSRTCChatListViewController */,
 				AED8BFC72580C36B003A211C /* NSRTCGroupChatViewController */,
 			);
 			path = NSRTCChatViewController;
@@ -1855,8 +1864,7 @@
 		AE4983FD2577845700755392 /* NSRTCChatManager */ = {
 			isa = PBXGroup;
 			children = (
-				AE4983FE2577846F00755392 /* NSRTCChatManager.h */,
-				AE4983FF2577846F00755392 /* NSRTCChatManager.m */,
+				AEE3DEF5258761BE00585D32 /* NSRTCChatManager */,
 				AE4983D525777B7800755392 /* Model */,
 				AE49847C2577939800755392 /* ViewModel */,
 				AE49842F25778D3E00755392 /* NSRTCChatMessageDBOperation */,
@@ -1871,6 +1879,8 @@
 			children = (
 				AE4984082577880100755392 /* NSRTCMessage.h */,
 				AE4984092577880100755392 /* NSRTCMessage.m */,
+				AEE3DF0F258765A100585D32 /* NSRTCMessageConstructor.h */,
+				AEE3DF10258765A100585D32 /* NSRTCMessageConstructor.m */,
 			);
 			path = NSRTCMessage;
 			sourceTree = "<group>";
@@ -2351,6 +2361,35 @@
 				AED8BFC92580C389003A211C /* NSRTCGroupChatViewController.m */,
 			);
 			path = NSRTCGroupChatViewController;
+			sourceTree = "<group>";
+		};
+		AEE3DEF5258761BE00585D32 /* NSRTCChatManager */ = {
+			isa = PBXGroup;
+			children = (
+				AE4983FE2577846F00755392 /* NSRTCChatManager.h */,
+				AE4983FF2577846F00755392 /* NSRTCChatManager.m */,
+				AEE3DF00258761FE00585D32 /* NSRTCMessageReceiver */,
+				AEE3DEF8258761CC00585D32 /* NSRTCMessageSender */,
+			);
+			path = NSRTCChatManager;
+			sourceTree = "<group>";
+		};
+		AEE3DEF8258761CC00585D32 /* NSRTCMessageSender */ = {
+			isa = PBXGroup;
+			children = (
+				AEE3DF142588912700585D32 /* NSRTCMessageSender.h */,
+				AEE3DF152588912700585D32 /* NSRTCMessageSender.m */,
+			);
+			path = NSRTCMessageSender;
+			sourceTree = "<group>";
+		};
+		AEE3DF00258761FE00585D32 /* NSRTCMessageReceiver */ = {
+			isa = PBXGroup;
+			children = (
+				AEE3DF1F2588919500585D32 /* NSRTCMessageReceiver.h */,
+				AEE3DF202588919500585D32 /* NSRTCMessageReceiver.m */,
+			);
+			path = NSRTCMessageReceiver;
 			sourceTree = "<group>";
 		};
 		AEEA99292576351B00757E66 = {
@@ -3301,6 +3340,7 @@
 				AEEA9AD4257643CD00757E66 /* NSReachability.m in Sources */,
 				AE1F56562578B92D00A2E676 /* NSRTCAVLiveChatView.m in Sources */,
 				AE1F563D2578B92D00A2E676 /* NSSearchPageController.m in Sources */,
+				AEE3DF162588912800585D32 /* NSRTCMessageSender.m in Sources */,
 				AE498464257791C300755392 /* NSRTCAVLivePhoneCallManager.m in Sources */,
 				AEEA9ACC257643CD00757E66 /* ServiceConstant.m in Sources */,
 				AEEA9A1825763DE200757E66 /* NSDate+Common.m in Sources */,
@@ -3333,6 +3373,7 @@
 				AEEA9A45257641D100757E66 /* NSVideoPlayer.m in Sources */,
 				AE1F565F2578B92D00A2E676 /* NSRTCVideoViewController.m in Sources */,
 				AE1F56792578B92D00A2E676 /* NSRTCChatTabBarBadgeLabel.m in Sources */,
+				AEE3DF212588919500585D32 /* NSRTCMessageReceiver.m in Sources */,
 				AEEA9B662576443300757E66 /* NSTableView.m in Sources */,
 				AEEA9ADB257643CD00757E66 /* NSRpcBaseOperation.m in Sources */,
 				AEEA9AE6257643CD00757E66 /* NSBaseSocketIOOperation.m in Sources */,
@@ -3358,6 +3399,7 @@
 				AEEA9B632576443300757E66 /* NSTabBarController.m in Sources */,
 				AE41C314257DBE85001706AF /* NSItemViewModel.m in Sources */,
 				AE1F56572578B92D00A2E676 /* NSRTCEAGLVideoView.m in Sources */,
+				AEE3DF11258765A100585D32 /* NSRTCMessageConstructor.m in Sources */,
 				AE5B2EE625830F3E00012319 /* NSRPCResultAnalysis.m in Sources */,
 				AEEA9B282576440B00757E66 /* NSBaseModel.m in Sources */,
 				AE1F56432578B92D00A2E676 /* NSContactsHeaderCell.m in Sources */,

@@ -53,7 +53,7 @@
     NSLog(@"willPresentNotification");
     //1. 处理通知
     NSDictionary *message =   notification.request.content.userInfo;
-//    YNETRTCMessage *messageModel  = [YNETRTCMessage yy_modelWithJSON:message];
+//    NSRTCMessage *messageModel  = [NSRTCMessage yy_modelWithJSON:message];
 //    NSLog(@"收到消息:%@",[messageModel yy_modelToJSONObject]);
     //2. 处理完成后条用 completionHandler ，用于指示在前台显示通知的形式
     completionHandler(UNNotificationPresentationOptionAlert);
@@ -61,28 +61,28 @@
 
 //APP在后台，点击推送信息，进入APP后执行的回调
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler API_AVAILABLE(ios(10.0)){
-/*
+ 
     //Local?
     
     //Remote
     NSDictionary *message =   response.notification.request.content.userInfo;
-    YNETRTCMessage *messageModel  = [YNETRTCMessage yy_modelWithJSON:message];
+    NSRTCMessage *messageModel  = [NSRTCMessage yy_modelWithJSON:message];
     if(messageModel.from){//Local
-        YNETRTCConversation *conversation = [[YNETRTCConversation alloc]initWithMessageModel:messageModel conversationId:messageModel.from];
+        NSRTCConversation *conversation = [[NSRTCConversation alloc]initWithMessageModel:messageModel conversationId:messageModel.from];
         NSLog(@"处理消息:%@",message);
-        UINavigationController *navgationCtrl  =  [YNETRTCMessageNotifyer requestCurrentNavigationVC];
+        UINavigationController *navgationCtrl  =  [NSRTCMessageNotifyer requestCurrentNavigationVC];
         
-        void (^CallPushToCurrNotifyChatHandler)(YNETRTCConversation *conversation) = ^(YNETRTCConversation *conversation){
+        void (^CallPushToCurrNotifyChatHandler)(NSRTCConversation *conversation) = ^(NSRTCConversation *conversation){
             //desc:
             
-            YNETRTCChatViewController *chatVc  = [[YNETRTCChatViewController alloc]initWithToUser:conversation.userName];
+            NSRTCChatViewController *chatVc  = [[NSRTCChatViewController alloc]initWithToUser:conversation.userName];
             
             chatVc.hidesBottomBarWhenPushed = YES;
             
             [navgationCtrl pushViewController:chatVc animated:YES];
         };
-        if ([navgationCtrl.topViewController isKindOfClass:[YNETRTCChatViewController class]]) {
-            YNETRTCChatViewController *currPageChat = (YNETRTCChatViewController*)navgationCtrl.topViewController;
+        if ([navgationCtrl.topViewController isKindOfClass:[NSRTCChatViewController class]]) {
+            NSRTCChatViewController *currPageChat = (NSRTCChatViewController*)navgationCtrl.topViewController;
             if ([currPageChat.toUser isEqualToString:messageModel.from]) {//已经在当前页,并且消息接收方是相同,不作处理
                 
             }else{
@@ -155,26 +155,26 @@
                 messageInfo[@"msg_id"] = params[@"msgId"];
                 messageInfo[@"sendStatus"] = @"0";
                 
-                YNETRTCMessage *messageModel  = [YNETRTCMessage yy_modelWithJSON:messageInfo];
-                YNETRTCMessageBody *body = [YNETRTCMessageBody yy_modelWithJSON:bodies];
+                NSRTCMessage *messageModel  = [NSRTCMessage yy_modelWithJSON:messageInfo];
+                NSRTCMessageBody *body = [NSRTCMessageBody yy_modelWithJSON:bodies];
                 messageModel.bodies = body;
                 
-                YNETRTCConversation *conversation = [[YNETRTCConversation alloc]initWithMessageModel:messageModel conversationId:messageModel.from];
+                NSRTCConversation *conversation = [[NSRTCConversation alloc]initWithMessageModel:messageModel conversationId:messageModel.from];
                 
                 // 消息插入数据库
-                [[YNETRTCChatMessageDBManager shareManager] addMessage:messageModel];
+                [[NSRTCChatMessageDBOperation shareInstance] addMessage:messageModel];
                 
                 // 会话插入数据库或者更新会话
-                BOOL isChatting = [messageModel.from isEqualToString:[YNETRTCChatManager shareManager].currChatPageViewModel.toUser];
-                [[YNETRTCChatMessageDBManager shareManager] addOrUpdateConversationWithMessage:messageModel isChatting:isChatting];
+                BOOL isChatting = [messageModel.from isEqualToString:[NSRTCChatManager shareManager].currChatPageViewModel.toUser];
+                [[NSRTCChatMessageDBOperation shareInstance] addOrUpdateConversationWithMessage:messageModel isChatting:isChatting];
                 
                 
                 
                 // 代理处理
-                for (id <YNETRTCChatMessageIOProtocol>delegate in [YNETRTCChatManager shareManager].delegateItems) {
+                for (id <NSRTCChatMessageIOProtocol>delegate in [NSRTCChatManager shareManager].delegateItems) {
                     if ([delegate respondsToSelector:@selector(chatManager:receivedMessage:)]) {
                         if (message) {
-                            [delegate chatManager:[YNETRTCChatManager shareManager] receivedMessage:messageModel];
+                            [delegate chatManager:[NSRTCChatManager shareManager] receivedMessage:messageModel];
                         }
                     }
                 }
@@ -186,7 +186,7 @@
                     dataDict[@"chat_type"] = params[@"chat_type"];
                     
                     UIViewController *vc = [UIView requestCurrentVC];
-                    YNETRTCAVLivePhoneCallViewController *phoneCall = [YNETRTCAVLivePhoneCallViewController receivePhoneCall:YNETRTCAVLivePhoneCallAudioCall phoneCallInfo:dataDict];
+                    NSRTCAVLivePhoneCallViewController *phoneCall = [NSRTCAVLivePhoneCallViewController receivePhoneCall:NSRTCAVLivePhoneCallAudioCall phoneCallInfo:dataDict];
                     [vc presentViewController:phoneCall animated:YES completion:nil];
                 }else if([params[@"type"] isEqualToString:@"videoChat"]){
                     
@@ -196,22 +196,22 @@
                     //                    params[@"from_user"];
                     dataDict[@"chat_type"] = params[@"chat_type"];
                     UIViewController *vc = [UIView requestCurrentVC];
-                    YNETRTCAVLivePhoneCallViewController *phoneCall = [YNETRTCAVLivePhoneCallViewController receivePhoneCall:YNETRTCAVLivePhoneCallVideoCall phoneCallInfo:dataDict];
+                    NSRTCAVLivePhoneCallViewController *phoneCall = [NSRTCAVLivePhoneCallViewController receivePhoneCall:NSRTCAVLivePhoneCallVideoCall phoneCallInfo:dataDict];
                     [vc presentViewController:phoneCall animated:YES completion:nil];
                 }else{
-                    UINavigationController *navgationCtrl  =  [YNETRTCMessageNotifyer requestCurrentNavigationVC];
+                    UINavigationController *navgationCtrl  =  [NSRTCMessageNotifyer requestCurrentNavigationVC];
                     
-                    void (^CallPushToCurrNotifyChatHandler)(YNETRTCConversation *conversation) = ^(YNETRTCConversation *conversation){
+                    void (^CallPushToCurrNotifyChatHandler)(NSRTCConversation *conversation) = ^(NSRTCConversation *conversation){
                         //desc:
                         
-                        YNETRTCChatViewController *chatVc  = [[YNETRTCChatViewController alloc]initWithToUser:conversation.userName];
+                        NSRTCChatViewController *chatVc  = [[NSRTCChatViewController alloc]initWithToUser:conversation.userName];
                         
                         chatVc.hidesBottomBarWhenPushed = YES;
                         
                         [navgationCtrl pushViewController:chatVc animated:YES];
                     };
-                    if ([navgationCtrl.topViewController isKindOfClass:[YNETRTCChatViewController class]]) {
-                        YNETRTCChatViewController *currPageChat = (YNETRTCChatViewController*)navgationCtrl.topViewController;
+                    if ([navgationCtrl.topViewController isKindOfClass:[NSRTCChatViewController class]]) {
+                        NSRTCChatViewController *currPageChat = (NSRTCChatViewController*)navgationCtrl.topViewController;
                         if ([currPageChat.toUser isEqualToString:messageModel.from]) {//已经在当前页,并且消息接收方是相同,不作处理
                             
                         }else{
@@ -235,7 +235,6 @@
     dispatch_after(5, dispatch_get_main_queue(), ^{
         NSLog(@"message:%@",message);
     });
- */
 }
  
 

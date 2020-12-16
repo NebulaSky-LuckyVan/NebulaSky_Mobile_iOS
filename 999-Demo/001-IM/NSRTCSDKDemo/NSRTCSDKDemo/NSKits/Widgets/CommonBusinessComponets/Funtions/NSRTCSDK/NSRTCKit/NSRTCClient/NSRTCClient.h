@@ -65,11 +65,7 @@ typedef void(^NSRTCClientCallBackHandler)(void);
 /*
  4.Set up a Message Group for to send invitation
  */
-- (NSRTCClient*(^)(NSArray *groupUsers,NSString*roomMessageOrigin,NSString*roomId))setupGroupMessage;
-
-
-
-
+- (NSRTCClient*(^)(NSArray *groupUsers,NSString*roomMessageOrigin,NSString*roomId))setupGroupMessage; 
 /*
  1.加入群聊聊天室
  */
@@ -93,8 +89,7 @@ typedef void(^NSRTCClientCallBackHandler)(void);
 #pragma SingleAVChat
 
 
-
-
+ 
 
 
 /*
@@ -153,17 +148,15 @@ typedef void(^NSRTCClientCallBackHandler)(void);
 - (NSRTCClient*(^)(NSRTCClientUserRejectedNotifyHandler))onReceivedVideoChatInvitationRejected;
 // 发送即时通讯消息
 + (void)sendChatMessage:(NSDictionary *)message success:(void(^)(NSDictionary*response))successHandler fail:(void(^)(void))failHandler;
++ (void)beginVideoChatFromUser:(NSString *)from toUser:(NSString *)to success:(void(^)(NSString*roomId))successHandler fail:(void(^)(void))failHandler;
++ (void)beginAudioChatFromUser:(NSString *)from toUser:(NSString *)to success:(void(^)(NSString*roomId))successHandler fail:(void(^)(void))failHandler;
 
-
-// 发送群聊消息
-+ (void)sendGroupChatMessage:(NSDictionary *)message success:(void(^)(NSDictionary*response))successHandler fail:(void(^)(void))failHandler;
 
 // 发起群聊
 + (void)beginGroupChatMessage:(NSDictionary *)message success:(void (^)(NSDictionary *))successHandler fail:(void (^)(void))failHandler;
+// 发送群聊消息
++ (void)sendGroupChatMessage:(NSDictionary *)message success:(void(^)(NSDictionary*response))successHandler fail:(void(^)(void))failHandler;
 
-+ (void)beginVideoChatFromUser:(NSString *)from toUser:(NSString *)to success:(void(^)(NSString*roomId))successHandler fail:(void(^)(void))failHandler;
-
-+ (void)beginAudioChatFromUser:(NSString *)from toUser:(NSString *)to success:(void(^)(NSString*roomId))successHandler fail:(void(^)(void))failHandler;
 
 @end
  

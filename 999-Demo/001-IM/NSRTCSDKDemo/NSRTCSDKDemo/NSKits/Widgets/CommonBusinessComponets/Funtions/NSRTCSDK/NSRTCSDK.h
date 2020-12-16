@@ -28,6 +28,7 @@
 #import "NSRTCClient.h"
 #import "NSRTCMessage.h"
 #import "NSRTCManager.h"
+#import "NSRTCMessageConstructor.h"
 #import "NSRTCChatManager.h"
 #import "NSRTCChatMessageDBOperation.h"
 

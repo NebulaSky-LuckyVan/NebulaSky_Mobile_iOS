@@ -13,8 +13,7 @@
 
 #import "NSRTCChatMessageDBOperation.h"
 
-
-#import "NSRTCClient.h"
+   
 
 #import "NSRTCConversation.h"
 
